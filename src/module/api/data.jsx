@@ -10,7 +10,7 @@ export const cursos = [
     "identifier": "Arduino_intro"
   },
   {
-    "id": 2,
+    "id": 5,
     "cap": "Arduino002",
     "title": "Preuba de Arduino",
     "description": "Aprende los fundamentos de la electrónica y programación con Arduino desde cero.",
@@ -19,7 +19,7 @@ export const cursos = [
     "type": "Free",
     "identifier": "Arduino_Preuba"
   },
-  /*
+  
   {
     "id": 2,
     "title": "Administración de Servidores Debian",
@@ -46,5 +46,5 @@ export const cursos = [
     "seccion": "Debian",
     "type": "Free",
     "identifier": "porque-linux"
-  }*/
+  }
 ];
