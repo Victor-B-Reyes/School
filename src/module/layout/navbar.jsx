@@ -9,7 +9,7 @@ function Navbar(){
         if (isActive) {
             return `${baseClasses} bg-blue-600 text-white scale-105 border-b-4 border-blue-700`;
         }
-        return `${baseClasses} text-gray-700 border-b-4 border-blue-500 hover:bg-blue-600 hover:text-white hover:scale-105`;
+        return `${baseClasses} text-white border-b-4 border-blue-500 hover:bg-blue-600 hover:text-white hover:scale-105`;
     };
     return(
         <nav>
@@ -20,9 +20,6 @@ function Navbar(){
                     </button>
                     <button className={getButtonClass('/Arduino')} onClick={() => navigate('/Arduino')}>
                         Arduino
-                    </button>
-                    <button className={getButtonClass('/Debian')} onClick={() => navigate('/Debian')}>
-                        Debian
                     </button>
                 </li>
             </ul>

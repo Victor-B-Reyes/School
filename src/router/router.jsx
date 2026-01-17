@@ -1,4 +1,5 @@
-import { Route, Routes } from "react-router-dom";
+import { useEffect } from "react";
+import { Route, Routes, useLocation } from "react-router-dom";
 
 import HomePage from "../module/home/page/homePage";
 
@@ -7,9 +8,20 @@ import Arduino001 from "../module/arduino/component/Arduino001/Arduino001Page";
 import DebianPage from "../module/debian/page/debianPage";
 
 
+function ScrollToTop() {
+    const { pathname } = useLocation();
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [pathname]);
+
+    return null;
+}
 
 function Enrutamiento(){
     return(
+        <>
+        <ScrollToTop/>
         <Routes>
             <Route path="/" element={<HomePage/>}/>
             <Route path="/Arduino" element={<ArduinoPage/>}>
@@ -22,6 +34,7 @@ function Enrutamiento(){
             </Route>
 
         </Routes>
+        </>
     )
 }
 
