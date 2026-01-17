@@ -5,7 +5,8 @@ function Navbar(){
     const location = useLocation();
     const getButtonClass = (path) => {
         const baseClasses = "px-4 py-2 font-semibold rounded-lg transition-all duration-300 transform focus:outline-none focus:ring-2 focus:ring-blue-500";
-        if (location.pathname === path) {
+        const isActive = path === '/' ? location.pathname === path : location.pathname.startsWith(path);
+        if (isActive) {
             return `${baseClasses} bg-blue-600 text-white scale-105 border-b-4 border-blue-700`;
         }
         return `${baseClasses} text-gray-700 border-b-4 border-blue-500 hover:bg-blue-600 hover:text-white hover:scale-105`;
