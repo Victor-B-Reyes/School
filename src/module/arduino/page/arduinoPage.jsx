@@ -14,7 +14,7 @@ function ArduinoPage(){
     return(
         <div>
             <Header />
-            <main className="w-full bg-gray-50">
+            <main className="w-full bg-gray-50 pb-3">
             <Navbar />
              
             <div className="container mx-auto px-4">
