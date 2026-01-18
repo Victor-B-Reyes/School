@@ -7,7 +7,7 @@ function Footer (){
             {/* Contact Info */}
             <div>
               <div className="flex items-center gap-4 mb-8">
-                <img src="./Logo.png" alt="Logo" className="w-20 h-auto object-contain" />
+                <img src="/Logo.png" alt="Logo" className="w-20 h-auto object-contain" />
                 <span className="text-xl font-bold text-indigo-400 tracking-wide">Programming Solutions</span>
               </div>
               <h2 className="text-3xl font-extrabold mb-6">Contáctanos</h2>
