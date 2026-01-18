@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { Route, Routes, useLocation } from "react-router-dom";
+import { Route, Routes, useLocation, Navigate } from "react-router-dom";
 
 import HomePage from "../module/home/page/homePage";
 
@@ -32,7 +32,7 @@ function Enrutamiento(){
                 <Route path="admin-debian" element={<>admin-debian</>}/>
                 <Route path="porque-linux" element={<>porque-linux</>}/>
             </Route>
-
+            <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
         </>
     )
