@@ -6,12 +6,12 @@ function Arduino001(){
             <div className="flex flex-col md:flex-row gap-6">
                 <div className="w-full md:w-1/6 flex flex-col gap-2 sticky top-4 h-fit border-r border-gray-200 pr-4">
                     <span className="font-bold text-gray-700 mb-2">Índice</span>
-                    <a href="#Titulo1" className="text-gray-600 hover:text-blue-600 hover:bg-gray-50 p-2 rounded transition-colors">¿Qué es?</a>
+                    <a href="Arduino_intro" className="text-gray-600 hover:text-blue-600 hover:bg-gray-50 p-2 rounded transition-colors">¿Qué es?</a>
                     <a href="#Titulo2" className="text-gray-600 hover:text-blue-600 hover:bg-gray-50 p-2 rounded transition-colors">Arduino UNO</a>
                     <a href="#Referencias" className="text-gray-600 hover:text-blue-600 hover:bg-gray-50 p-2 rounded transition-colors">Referencias</a>
                 </div>
                 <div className="w-full md:w-5/6">
-                    <h1 id="Titulo1" className="text-2xl font-bold text-gray-800 mb-4 pt-2">¿Qué es arduino?</h1>
+                    <h1 className="text-2xl font-bold text-gray-800 mb-4 pt-2">¿Qué es arduino?</h1>
                     <p className="text-gray-700 text-justify mb-8 leading-relaxed">
                         Arduino es una plataforma de desarrollo basada en una placa electrónica de hardware libre
                         que incorpora un microcontrolador re-programable y una serie de pines hembra. Estos

@@ -26,11 +26,8 @@ function Enrutamiento(){
             <Route path="/" element={<HomePage/>}/>
             <Route path="/Arduino" element={<ArduinoPage/>}>
                 <Route path="Arduino_intro" element={<Arduino001/>}/>
-                <Route path="Arduino_Preuba" element={<>Pruba</>}/>
             </Route>
             <Route path="/Debian" element={<DebianPage/>}>
-                <Route path="admin-debian" element={<>admin-debian</>}/>
-                <Route path="porque-linux" element={<>porque-linux</>}/>
             </Route>
             <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
