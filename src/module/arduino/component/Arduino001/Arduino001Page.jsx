@@ -1,41 +1,153 @@
-
+import { useState, useEffect } from "react";
+import Arduino001P01Component from "./Arduino001_p01Component";
+import Arduino001P02Component from "./Arduino001_P02Component";
 
 function Arduino001(){
+    const [page, setPage] = useState(0);
+
+    useEffect(() => {
+        switch (page) {
+            case 1:
+            const element1 = document.getElementById('Titulo4');
+            if (element1) {
+                element1.scrollIntoView({ behavior: 'smooth' });
+            }
+            break;
+            case 2:
+            const element2 = document.getElementById('Titulo5');
+            if (element2) {
+                element2.scrollIntoView({ behavior: 'smooth' });
+            }
+            break;
+            default:
+            break;
+        }
+
+    }, [page]);
+
     return(
         <div className="w-full rounded-lg shadow-2xl bg-white p-5">
             <div className="flex flex-col md:flex-row gap-6">
                 <div className="w-full md:w-1/6 flex flex-col gap-2 sticky top-4 h-fit border-r border-gray-200 pr-4">
                     <span className="font-bold text-gray-700 mb-2">Índice</span>
-                    <a href="Arduino_intro" className="text-gray-600 hover:text-blue-600 hover:bg-gray-50 p-2 rounded transition-colors">¿Qué es?</a>
-                    <a href="#Titulo2" className="text-gray-600 hover:text-blue-600 hover:bg-gray-50 p-2 rounded transition-colors">Arduino UNO</a>
+                    <a href="#Titulo1" onClick={() => setPage(0)} className="text-gray-600 hover:text-blue-600 hover:bg-gray-50 p-2 rounded transition-colors">¿Qué es?</a>
+                    <a href="#Titulo2" onClick={() => setPage(0)} className="text-gray-600 hover:text-blue-600 hover:bg-gray-50 p-2 rounded transition-colors">Arduino UNO</a>
+                    <a href="#Titulo3" onClick={() => setPage(0)} className="text-gray-600 hover:text-blue-600 hover:bg-gray-50 p-2 rounded transition-colors">Wokwi</a>
+                    <a href="#Titulo4" onClick={(e) => { e.preventDefault(); setPage(1); }} className=" hover:text-blue-600 font-bold hover:bg-gray-50 py-2 rounded transition-colors">Práctica 1</a>
+                    <a href="#Titulo5" onClick={(e) => { e.preventDefault(); setPage(2); }} className=" hover:text-blue-600 font-bold hover:bg-gray-50 py-2 rounded transition-colors">Práctica 2</a>
                     <a href="#Referencias" className="text-gray-600 hover:text-blue-600 hover:bg-gray-50 p-2 rounded transition-colors">Referencias</a>
                 </div>
+                
                 <div className="w-full md:w-5/6">
-                    <h1 className="text-2xl font-bold text-gray-800 mb-4 pt-2">¿Qué es arduino?</h1>
-                    <p className="text-gray-700 text-justify mb-8 leading-relaxed">
-                        Arduino es una plataforma de desarrollo basada en una placa electrónica de hardware libre
-                        que incorpora un microcontrolador re-programable y una serie de pines hembra. Estos
-                        permiten establecer conexiones entre el microcontrolador y los diferentes sensores y
-                        actuadores de una manera muy sencilla (principalmente con cables dupont) (Aguayo, 2014).
-                    </p>
-                    <h1 id="Titulo2" className="text-2xl font-bold text-gray-800 mb-4 pt-2">Arduino uno</h1>
-                    <h2 className="text-xl font-semibold text-gray-700 mb-3">¿Qué es arduino uno?</h2>
-                    <p className="text-gray-700 text-justify mb-8 leading-relaxed">
-                        La placa Arduino UNO es la mejor placa para iniciar con la programación y la electrónica.
-                        Si es tu primera experiencia con la plataforma Arduino, la Arduino UNO es la opción mas
-                        robusta, mas usada y con mayor cantidad de documentación de toda la familia Arduino.
-                        <br /><br />
-                        Arduino UNO es una placa basada en el microcontrolador ATmega328P. Tiene 14 pines de
-                        entrada/salida digital (de los cuales 6 pueden ser usando con PWM), 6 entradas analógicas,
-                        un cristal de 16Mhz, conexión USB, conector jack de alimentación, terminales para conexión
-                        ICSP y un botón de reseteo. Tiene toda la electrónica necesaria para que el microcontrolador
-                        opere, simplemente hay que conectarlo a la energía por el puerto USB ó con un transformador
-                        AC-DC (Aguayo, 2019).
-                    </p>
-                    <div className="flex justify-center items-center">
-                        <img src="/arduino_img/arduinop1/arduino.png" alt="Placa Arduino UNO" className="w-full md:w-1/2 h-auto" />
-                    </div>
-                    
+                    {page === 0 ?<div>
+                        <h1 id="Titulo1" className="text-2xl font-bold text-gray-800 mb-4 pt-2">¿Qué es Arduino?</h1>
+                        <p className="text-gray-700 text-justify mb-8 leading-relaxed">
+                            Arduino es una plataforma de desarrollo basada en una placa electrónica de hardware libre
+                            que incorpora un microcontrolador re-programable y una serie de pines hembra. Estos
+                            permiten establecer conexiones entre el microcontrolador y los diferentes sensores y
+                            actuadores de una manera muy sencilla (principalmente con cables dupont) (Aguayo, 2014).
+                        </p>
+                        <h1 id="Titulo2" className="text-2xl font-bold text-gray-800 mb-4 pt-2">Arduino UNO</h1>
+                        <h2 className="text-xl font-semibold text-gray-700 mb-3">¿Qué es Arduino UNO?</h2>
+                        <p className="text-gray-700 text-justify mb-8 leading-relaxed">
+                            La placa Arduino UNO es la mejor placa para iniciar con la programación y la electrónica.
+                            Si es tu primera experiencia con la plataforma Arduino, la Arduino UNO es la opción más
+                            robusta, más usada y con mayor cantidad de documentación de toda la familia Arduino.
+                            <br /><br />
+                            Arduino UNO es una placa basada en el microcontrolador ATmega328P. Tiene 14 pines de
+                            entrada/salida digital (de los cuales 6 pueden ser usados con PWM), 6 entradas analógicas,
+                            un cristal de 16 MHz, conexión USB, conector jack de alimentación, terminales para conexión
+                            ICSP y un botón de reseteo. Tiene toda la electrónica necesaria para que el microcontrolador
+                            opere, simplemente hay que conectarlo a la energía por el puerto USB o con un transformador
+                            AC-DC (Aguayo, 2019).
+                        </p>
+                        <div className="flex justify-center items-center">
+                            <img src="/arduino_img/arduinop1/arduino.png" className="w-full md:w-1/2 h-auto"  alt="Placa Arduino UNO" />
+                        </div>
+                        <p> 
+                            Enlace: 
+                            <a 
+                                href="https://www.circuito.io/blog/arduino-uno-pinout/" 
+                                target="_blank" 
+                                rel="noopener noreferrer" 
+                                className="text-blue-500 underline hover:text-blue-700">
+                                    Pines de arduino
+                            </a>
+                        </p>
+                        <h1 id="Titulo3" className="text-2xl font-bold text-gray-800 mb-4 pt-2">Wokwi</h1>
+                        <p className="text-gray-700 text-justify mb-8 leading-relaxed">
+                            Para aprender a trabajar con Arduino utilizaremos el simulador Wokwi que es una plataforma online:
+                        </p>
+                        <div className="flex justify-center items-center">
+                            <img src="/arduino_img/arduinop1/sitio.png" className="w-full md:w-1/2 h-auto"  alt="Sitio" />
+                        </div>
+                        <p> 
+                            Enlace: 
+                            <a 
+                                href="https://wokwi.com/arduino" 
+                                target="_blank" 
+                                rel="noopener noreferrer" 
+                                className="text-blue-500 underline hover:text-blue-700">
+                                    Wokwi
+                            </a>
+                        </p>
+                        <p className="text-gray-700 text-justify mb-8 leading-relaxed">
+                            En la parte de abajo encontraremos lo siguiente.
+                        </p>
+                        <div className="flex justify-center items-center">
+                            <img src="/arduino_img/arduinop1/mesas.png" className="w-full md:w-1/2 h-auto"  alt="Mesas de trabajo" />
+                        </div>
+                        <p className="text-gray-700 text-justify mb-8 leading-relaxed">
+                            Y accederemos al Arduino UNO para comenzar.
+                        </p>
+                        <div className="flex justify-center items-center">
+                            <img src="/arduino_img/arduinop1/simulador.png" className="w-full md:w-1/2 h-auto"  alt="Simulador" />
+                        </div>
+                        <p className="text-gray-700 text-justify mb-8 leading-relaxed">
+                            En el simulador tenemos dos partes.
+                        </p>
+                        <p className="text-gray-700 text-justify mb-8 leading-relaxed">
+                            El editor de código.
+                        </p>
+                        <div className="flex justify-center items-center">
+                            <img src="/arduino_img/arduinop1/codigo.png" className="w-full md:w-1/2 h-auto"  alt="Código" />
+                        </div>
+                        <p className="text-gray-700 text-justify mb-8 leading-relaxed">
+                            Y el simulador:
+                        </p>
+                        <div className="flex justify-center items-center">
+                            <img src="/arduino_img/arduinop1/placa.png" className="w-full md:w-1/2 h-auto"  alt="Placa" />
+                        </div>
+                        <h2 className="text-xl font-semibold text-gray-700 mb-3">Partes del código</h2>
+                        <p className="text-gray-700 text-justify mb-8 leading-relaxed">
+                            En la programación con Arduino tenemos dos funciones principales.
+                        </p>
+                        <p className="text-gray-700 text-justify mb-8 leading-relaxed">
+                            Primero tenemos el:
+                        </p>
+                        <div className="flex justify-center items-center">
+                            <img src="/arduino_img/arduinop1/setup.png" className="w-full md:w-1/2 h-auto"  alt="Setup" />
+                        </div>
+                        <p className="text-gray-700 text-justify mb-8 leading-relaxed">
+                            Hace referencia a que todo lo que escribamos aquí se va a ejecutar solo una vez, esta función normalmente se ocupa para las configuraciones iniciales.
+                        </p>
+                        <p className="text-gray-700 text-justify mb-8 leading-relaxed">
+                            Y después tenemos el:
+                        </p>
+                        <div className="flex justify-center items-center">
+                            <img src="/arduino_img/arduinop1/loop.png" className="w-full md:w-1/2 h-auto"  alt="Loop" />
+                        </div>
+                        <p className="text-gray-700 text-justify mb-8 leading-relaxed">
+                            Esta función se ejecutará después del void setup(), y se ejecutará todo el tiempo a diferencia del anterior que solo se ejecuta una vez.
+                        </p> 
+                    </div> : null}
+                    {page === 1 ?
+                        <Arduino001P01Component />
+                    : null}
+                    {page === 2 ?
+                        <Arduino001P02Component />
+                    : null}
+
                     <h1 id="Referencias" className="text-2xl font-bold text-gray-800 mb-4 pt-2">Referencias</h1>
                     <div className="flex flex-col gap-2 text-gray-600 text-sm">
                         <p>
