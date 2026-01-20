@@ -31,7 +31,7 @@ void loop() {
 }`;
     return (
         <>
-        <h1 id="Titulo5" className="text-2xl font-bold text-gray-800 mb-4 pt-2">Práctica 2: variables;</h1>
+        <h1 id="inicio" className="text-2xl font-bold text-gray-800 mb-4 pt-2">Práctica 2: variables;</h1>
         <p className="text-gray-700 text-justify mb-8 leading-relaxed">
             En la segunda práctica trabajaremos con variables. <br />
             Trabajaremos en la función loop().

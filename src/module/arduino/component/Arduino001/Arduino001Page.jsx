@@ -8,13 +8,13 @@ function Arduino001(){
     useEffect(() => {
         switch (page) {
             case 1:
-            const element1 = document.getElementById('Titulo4');
+            const element1 = document.getElementById('inicio');
             if (element1) {
                 element1.scrollIntoView({ behavior: 'smooth' });
             }
             break;
             case 2:
-            const element2 = document.getElementById('Titulo5');
+            const element2 = document.getElementById('inicio');
             if (element2) {
                 element2.scrollIntoView({ behavior: 'smooth' });
             }
@@ -24,17 +24,26 @@ function Arduino001(){
         }
 
     }, [page]);
+    const resetpage = () => {
+        const element = document.getElementById('inicio');
+        if (element) {
+            element.scrollIntoView({ behavior: 'smooth' });
+        } else {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+     }
+
 
     return(
         <div className="w-full rounded-lg shadow-2xl bg-white p-5">
             <div className="flex flex-col md:flex-row gap-6">
-                <div className="w-full md:w-1/6 flex flex-col gap-2 sticky top-4 h-fit border-r border-gray-200 pr-4">
+                <div className="w-full md:w-1/6 flex flex-col gap-2 md:sticky md:top-4 h-fit border-r border-gray-200 pr-4">
                     <span className="font-bold text-gray-700 mb-2">Índice</span>
-                    <a href="#Titulo1" onClick={() => setPage(0)} className="text-gray-600 hover:text-blue-600 hover:bg-gray-50 p-2 rounded transition-colors">¿Qué es?</a>
+                    <a href="#inicio" onClick={() => setPage(0)} className="text-gray-600 hover:text-blue-600 hover:bg-gray-50 p-2 rounded transition-colors">¿Qué es?</a>
                     <a href="#Titulo2" onClick={() => setPage(0)} className="text-gray-600 hover:text-blue-600 hover:bg-gray-50 p-2 rounded transition-colors">Arduino UNO</a>
                     <a href="#Titulo3" onClick={() => setPage(0)} className="text-gray-600 hover:text-blue-600 hover:bg-gray-50 p-2 rounded transition-colors">Wokwi</a>
-                    <a href="#Titulo4" onClick={(e) => { e.preventDefault(); setPage(1); }} className=" hover:text-blue-600 font-bold hover:bg-gray-50 py-2 rounded transition-colors">Práctica 1</a>
-                    <a href="#Titulo5" onClick={(e) => { e.preventDefault(); setPage(2); }} className=" hover:text-blue-600 font-bold hover:bg-gray-50 py-2 rounded transition-colors">Práctica 2</a>
+                    <a href="#inicio" onClick={(e) => { e.preventDefault(); setPage(1); }} className=" hover:text-blue-600 font-bold hover:bg-gray-50 py-2 rounded transition-colors">Práctica 1</a>
+                    <a href="#inicio" onClick={(e) => { e.preventDefault(); setPage(2); }} className=" hover:text-blue-600 font-bold hover:bg-gray-50 py-2 rounded transition-colors">Práctica 2</a>
                     <a href="#Referencias" className="text-gray-600 hover:text-blue-600 hover:bg-gray-50 p-2 rounded transition-colors">Referencias</a>
                 </div>
                 
@@ -160,7 +169,17 @@ function Arduino001(){
                 </div>
 
             </div>
-            
+            {page !== 0 && (
+                <button
+                    onClick={resetpage}
+                    className="fixed bottom-4 right-4 bg-blue-600 hover:bg-blue-700 text-white font-bold p-3 rounded-full shadow-lg transition-all duration-300 z-50"
+                    title="Regresar al menú"
+                >
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M9 15 3 9m0 0 6-6M3 9h12a6 6 0 0 1 0 12h-3" />
+                    </svg>
+                </button>
+            )}
            
        </div>
     )

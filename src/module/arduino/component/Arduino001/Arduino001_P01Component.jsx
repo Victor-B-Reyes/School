@@ -29,7 +29,7 @@ void loop() {
 }`;
     return (
         <>
-        <h1 id="Titulo4" className="text-2xl font-bold text-gray-800 mb-4 pt-2">Práctica 1 Arduino: configuración y el primer “hola mundo”</h1>
+        <h1 id="inicio" className="text-2xl font-bold text-gray-800 mb-4 pt-2">Práctica 1 Arduino: configuración y el primer “hola mundo”</h1>
         <p className="text-gray-700 text-justify mb-8 leading-relaxed">
             La primera configuración que se realiza es la del Serial.begin <br />
             “Establece la velocidad de datos en bits por segundo (baud) para la transmisión de datos en serie.
