@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import Arduino001P01Component from "./Arduino001_p01Component";
+import Arduino001P01Component from "./Arduino001_P01Component";
 import Arduino001P02Component from "./Arduino001_P02Component";
 
 function Arduino001(){
