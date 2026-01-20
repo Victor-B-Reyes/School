@@ -169,7 +169,6 @@ function Arduino001(){
                 </div>
 
             </div>
-            {page !== 0 && (
                 <button
                     onClick={resetpage}
                     className="fixed bottom-4 right-4 bg-blue-600 hover:bg-blue-700 text-white font-bold p-3 rounded-full shadow-lg transition-all duration-300 z-50"
@@ -179,7 +178,6 @@ function Arduino001(){
                         <path strokeLinecap="round" strokeLinejoin="round" d="M9 15 3 9m0 0 6-6M3 9h12a6 6 0 0 1 0 12h-3" />
                     </svg>
                 </button>
-            )}
            
        </div>
     )
