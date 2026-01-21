@@ -1,12 +1,19 @@
 import { useState, useEffect } from "react";
 import Arduino001P01Component from "./Arduino001_P01Component";
 import Arduino001P02Component from "./Arduino001_P02Component";
+import Arduino001P03Component from "./Arduino001_P03Component";
 
 function Arduino001(){
     const [page, setPage] = useState(0);
 
     useEffect(() => {
         switch (page) {
+            case 0:
+            const element0 = document.getElementById('inicio');
+            if (element0) {
+                element0.scrollIntoView({ behavior: 'smooth' });
+            }
+            break;
             case 1:
             const element1 = document.getElementById('inicio');
             if (element1) {
@@ -17,6 +24,11 @@ function Arduino001(){
             const element2 = document.getElementById('inicio');
             if (element2) {
                 element2.scrollIntoView({ behavior: 'smooth' });
+            }
+            case 3:
+            const element3 = document.getElementById('inicio');
+            if (element3) {
+                element3.scrollIntoView({ behavior: 'smooth' });
             }
             break;
             default:
@@ -39,17 +51,19 @@ function Arduino001(){
             <div className="flex flex-col md:flex-row gap-6">
                 <div className="w-full md:w-1/6 flex flex-col gap-2 md:sticky md:top-4 h-fit border-r border-gray-200 pr-4">
                     <span className="font-bold text-gray-700 mb-2">Índice</span>
-                    <a href="#inicio" onClick={() => setPage(0)} className="text-gray-600 hover:text-blue-600 hover:bg-gray-50 p-2 rounded transition-colors">¿Qué es?</a>
-                    <a href="#Titulo2" onClick={() => setPage(0)} className="text-gray-600 hover:text-blue-600 hover:bg-gray-50 p-2 rounded transition-colors">Arduino UNO</a>
-                    <a href="#Titulo3" onClick={() => setPage(0)} className="text-gray-600 hover:text-blue-600 hover:bg-gray-50 p-2 rounded transition-colors">Wokwi</a>
-                    <a href="#inicio" onClick={(e) => { e.preventDefault(); setPage(1); }} className=" hover:text-blue-600 font-bold hover:bg-gray-50 py-2 rounded transition-colors">Práctica 1</a>
-                    <a href="#inicio" onClick={(e) => { e.preventDefault(); setPage(2); }} className=" hover:text-blue-600 font-bold hover:bg-gray-50 py-2 rounded transition-colors">Práctica 2</a>
+                    <a href="#inicio" onClick={(e) => { e.preventDefault(); setPage(0); }} className="hover:text-blue-600 font-bold hover:bg-gray-50 py-2 rounded transition-colors">Introducción</a>
+                    <a href="#Titulo2" onClick={(e) => {setPage(0) }} className="text-gray-600 hover:text-blue-600 hover:bg-gray-50 p-2 rounded transition-colors">Arduino UNO</a>
+                    <a href="#Titulo3" onClick={(e) => {setPage(0) }} className="text-gray-600 hover:text-blue-600 hover:bg-gray-50 p-2 rounded transition-colors">Wokwi</a>
+                    <a href="#inicio" onClick={(e) => { e.preventDefault(); setPage(1); }} className=" hover:text-blue-600 font-bold hover:bg-gray-50 py-2 rounded transition-colors">"hola mundo"</a>
+                    <a href="#inicio" onClick={(e) => { e.preventDefault(); setPage(2); }} className=" hover:text-blue-600 font-bold hover:bg-gray-50 py-2 rounded transition-colors">Variables</a>
+                    <a href="#inicio" onClick={(e) => { e.preventDefault(); setPage(3); }} className=" hover:text-blue-600 font-bold hover:bg-gray-50 py-2 rounded transition-colors">Estructuras con operadores</a>
                     <a href="#Referencias" className="text-gray-600 hover:text-blue-600 hover:bg-gray-50 p-2 rounded transition-colors">Referencias</a>
                 </div>
                 
                 <div className="w-full md:w-5/6">
                     {page === 0 ?<div>
-                        <h1 id="Titulo1" className="text-2xl font-bold text-gray-800 mb-4 pt-2">¿Qué es Arduino?</h1>
+                        <h1 id="inicio" className="text-2xl font-bold text-gray-800 mb-4 pt-2">Introducción</h1>
+                        <h2 className="text-xl font-semibold text-gray-700 mb-3">¿Qué es Arduino?</h2>
                         <p className="text-gray-700 text-justify mb-8 leading-relaxed">
                             Arduino es una plataforma de desarrollo basada en una placa electrónica de hardware libre
                             que incorpora un microcontrolador re-programable y una serie de pines hembra. Estos
@@ -155,6 +169,9 @@ function Arduino001(){
                     : null}
                     {page === 2 ?
                         <Arduino001P02Component />
+                    : null}
+                    {page === 3 ?
+                        <Arduino001P03Component />
                     : null}
 
                     <h1 id="Referencias" className="text-2xl font-bold text-gray-800 mb-4 pt-2">Referencias</h1>
