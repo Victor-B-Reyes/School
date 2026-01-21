@@ -40,7 +40,7 @@ void loop() {
 }`;
     return (
         <>
-        <h1 id="inicio" className="text-2xl font-bold text-gray-800 mb-4 pt-2">Práctica 3: Estructuras con operadores;</h1>
+        <h1 id="inicio" className="text-2xl font-bold text-gray-800 mb-4 pt-2">Práctica 3: Estructuras con operadores</h1>
         <p className="text-gray-700 text-justify mb-8 leading-relaxed">
             Para realizar las operaciones necesitamos saber los operadores más utilizados
         </p>
@@ -97,7 +97,7 @@ void loop() {
             ¿Cuál es la diferencia? <br />
             El método de realizarlo, cualquiera de los dos métodos es correcto,
             pero lo adecuado es trabajar con variables. <br />
-            Ya que cuando se un proyecto más grande ocuparemos más datos. <br />
+            Ya que cuando sea un proyecto más grande ocuparemos más datos. <br />
             La primera variable que tenemos es
         </p>
         <SyntaxHighlighter language="cpp" style={oneDark}>
@@ -105,7 +105,7 @@ void loop() {
         </SyntaxHighlighter>
         <p className="text-gray-700 text-justify mb-8 leading-relaxed">
             En este caso es un tipo de dato entero y su nombre será Numero1 (Tenemos que recordar
-            que pude ser asignado cualquier nombre), y tiene el valor de 5. <br />
+            que puede ser asignado cualquier nombre), y tiene el valor de 5. <br />
             Lo mismo pasa en
         </p>
         <SyntaxHighlighter language="cpp" style={oneDark}>
@@ -126,7 +126,7 @@ void loop() {
         </SyntaxHighlighter>
         <p className="text-gray-700 text-justify mb-8 leading-relaxed">
             Siguiendo la siguiente estructura, que lo que hace en la línea 9 es mostrar un mensaje
-            (Resultado de la suma es: ) sin dar un saldo de línea, y en la 10 muestra el valor de la suma,
+            (Resultado de la suma es: ) sin dar un salto de línea, y en la 10 muestra el valor de la suma,
             pero añade un salto de línea.
         </p>
         <SyntaxHighlighter language="cpp" style={oneDark}>

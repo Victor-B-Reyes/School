@@ -2,39 +2,14 @@ import { useState, useEffect } from "react";
 import Arduino001P01Component from "./Arduino001_P01Component";
 import Arduino001P02Component from "./Arduino001_P02Component";
 import Arduino001P03Component from "./Arduino001_P03Component";
+import Arduino001P04Component from "./Arduino001_P04Component";
 
 function Arduino001(){
     const [page, setPage] = useState(0);
 
     useEffect(() => {
-        switch (page) {
-            case 0:
-            const element0 = document.getElementById('inicio');
-            if (element0) {
-                element0.scrollIntoView({ behavior: 'smooth' });
-            }
-            break;
-            case 1:
-            const element1 = document.getElementById('inicio');
-            if (element1) {
-                element1.scrollIntoView({ behavior: 'smooth' });
-            }
-            break;
-            case 2:
-            const element2 = document.getElementById('inicio');
-            if (element2) {
-                element2.scrollIntoView({ behavior: 'smooth' });
-            }
-            case 3:
-            const element3 = document.getElementById('inicio');
-            if (element3) {
-                element3.scrollIntoView({ behavior: 'smooth' });
-            }
-            break;
-            default:
-            break;
-        }
-
+        // Hacer scroll suave al inicio del contenido
+        window.scrollTo({ top: 0, behavior: 'smooth' });
     }, [page]);
     const resetpage = () => {
         const element = document.getElementById('inicio');
@@ -51,12 +26,13 @@ function Arduino001(){
             <div className="flex flex-col md:flex-row gap-6">
                 <div className="w-full md:w-1/6 flex flex-col gap-2 md:sticky md:top-4 h-fit border-r border-gray-200 pr-4">
                     <span className="font-bold text-gray-700 mb-2">Índice</span>
-                    <a href="#inicio" onClick={(e) => { e.preventDefault(); setPage(0); }} className="hover:text-blue-600 font-bold hover:bg-gray-50 py-2 rounded transition-colors">Introducción</a>
-                    <a href="#Titulo2" onClick={(e) => {setPage(0) }} className="text-gray-600 hover:text-blue-600 hover:bg-gray-50 p-2 rounded transition-colors">Arduino UNO</a>
-                    <a href="#Titulo3" onClick={(e) => {setPage(0) }} className="text-gray-600 hover:text-blue-600 hover:bg-gray-50 p-2 rounded transition-colors">Wokwi</a>
+                    <a href="#inicio" onClick={(e) => { e.preventDefault(); setPage(0); const element = document.getElementById('inicio'); setTimeout(() => element?.scrollIntoView({ behavior: 'smooth' }), 0); }} className="hover:text-blue-600 font-bold hover:bg-gray-50 py-2 rounded transition-colors">Introducción</a>
+                    <a href="#Titulo2" onClick={(e) => { e.preventDefault(); setPage(0); const element = document.getElementById('Titulo2'); setTimeout(() => element?.scrollIntoView({ behavior: 'smooth' }), 0); }} className="text-gray-600 hover:text-blue-600 hover:bg-gray-50 p-2 rounded transition-colors">Arduino UNO</a>
+                    <a href="#Titulo3" onClick={(e) => { e.preventDefault(); setPage(0); const element = document.getElementById('Titulo3'); setTimeout(() => element?.scrollIntoView({ behavior: 'smooth' }), 0); }} className="text-gray-600 hover:text-blue-600 hover:bg-gray-50 p-2 rounded transition-colors">Wokwi</a>
                     <a href="#inicio" onClick={(e) => { e.preventDefault(); setPage(1); }} className=" hover:text-blue-600 font-bold hover:bg-gray-50 py-2 rounded transition-colors">"hola mundo"</a>
                     <a href="#inicio" onClick={(e) => { e.preventDefault(); setPage(2); }} className=" hover:text-blue-600 font-bold hover:bg-gray-50 py-2 rounded transition-colors">Variables</a>
                     <a href="#inicio" onClick={(e) => { e.preventDefault(); setPage(3); }} className=" hover:text-blue-600 font-bold hover:bg-gray-50 py-2 rounded transition-colors">Estructuras con operadores</a>
+                    <a href="#inicio" onClick={(e) => { e.preventDefault(); setPage(4); }} className=" hover:text-blue-600 font-bold hover:bg-gray-50 py-2 rounded transition-colors">Estructuras con comparadores</a>
                     <a href="#Referencias" className="text-gray-600 hover:text-blue-600 hover:bg-gray-50 p-2 rounded transition-colors">Referencias</a>
                 </div>
                 
@@ -172,6 +148,9 @@ function Arduino001(){
                     : null}
                     {page === 3 ?
                         <Arduino001P03Component />
+                    : null}
+                    {page === 4 ?
+                        <Arduino001P04Component />
                     : null}
 
                     <h1 id="Referencias" className="text-2xl font-bold text-gray-800 mb-4 pt-2">Referencias</h1>
