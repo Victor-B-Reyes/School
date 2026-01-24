@@ -68,8 +68,8 @@ const codigo6 =
 }`;
     return (
         <>
-        <h1 id="inicio" className="text-2xl font-bold text-gray-800 mb-4 pt-2">Práctica 4: Estructuras con comparadores</h1>
-        <p className="text-gray-700 text-justify mb-8 leading-relaxed">
+        <h1 id="inicio" className="titulo-principal">Práctica 4: Estructuras con comparadores</h1>
+        <p className="parrafo">
             Los comparadores permiten realizar una comparación entre dos cosas (sean números, letras, u objetos, etc.),
             normalmente se utilizan en condicionales.
         </p>
@@ -114,7 +114,8 @@ const codigo6 =
                 </tr>
             </tbody>
         </table>
-        <p className="text-gray-700 text-justify mb-8 leading-relaxed">
+        <br />
+        <p className="parrafo">
             Las comparaciones tienen dos posibles resultados: <br />
             <strong>Verdadero (True):</strong> se cumple la condición. <br />
             <strong>Falso (False):</strong> no se cumple la condición.<br />
@@ -124,32 +125,32 @@ const codigo6 =
         <SyntaxHighlighter language="cpp" style={oneDark}>
             {codigo1}
         </SyntaxHighlighter>
-        <p className="text-gray-700 text-justify mb-8 leading-relaxed">
+        <p className="parrafo">
             Si la condición es verdadera, necesitamos especificar qué código debe ejecutarse. Para ello, abrimos llaves {} después del paréntesis, formando un bloque de código.
         </p>
         <SyntaxHighlighter language="cpp" style={oneDark}>
             {codigo2}
         </SyntaxHighlighter>
-        <p className="text-gray-700 text-justify mb-8 leading-relaxed">
+        <p className="parrafo">
             El programa mostrará el mensaje "Alumno aprobado" en la consola cuando la condición sea verdadera.
         </p>
         <SyntaxHighlighter language="cpp" style={oneDark}>
             {codigo3}
         </SyntaxHighlighter>
-        <p className="text-gray-700 text-justify mb-8 leading-relaxed">
+        <p className="parrafo">
             En este caso la condición se cumple, por lo que entra al primer bloque. Si queremos ejecutar código cuando la condición NO se cumple, utilizamos la sentencia <strong>else</strong>, que significa "si no":
         </p>
         <SyntaxHighlighter language="cpp" style={oneDark}>
             {codigo4}
         </SyntaxHighlighter>
-        <p className="text-gray-700 text-justify mb-8 leading-relaxed">
+        <p className="parrafo">
             En este caso, como 8 es mayor o igual a 7, se muestra "Alumno aprobado". <br />
             Ahora veamos un caso donde la condición NO se cumple:
         </p>
         <SyntaxHighlighter language="cpp" style={oneDark}>
             {codigo5}
         </SyntaxHighlighter>
-        <p className="text-gray-700 text-justify mb-8 leading-relaxed">
+        <p className="parrafo">
             En este caso, como 6 es menor que 7, se ejecuta el bloque <strong>else</strong> y se muestra \"Alumno reprobado\". <br />
             La estructura general de un condicional if-else es la siguiente:
         </p>

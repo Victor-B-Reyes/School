@@ -40,8 +40,8 @@ void loop() {
 }`;
     return (
         <>
-        <h1 id="inicio" className="text-2xl font-bold text-gray-800 mb-4 pt-2">Práctica 3: Estructuras con operadores</h1>
-        <p className="text-gray-700 text-justify mb-8 leading-relaxed">
+        <h1 id="inicio" className="titulo-principal">Práctica 3: Estructuras con operadores</h1>
+        <p className="parrafo">
             Para realizar las operaciones necesitamos saber los operadores más utilizados
         </p>
         <table className="w-full text-sm text-left text-gray-500">
@@ -80,20 +80,21 @@ void loop() {
                 </tr>
             </tbody>
         </table>
-        <p className="text-gray-700 text-justify mb-8 leading-relaxed">
+        <br />
+        <p className="parrafo">
             Para esto podemos trabajar de dos formas <br />
             La operación mostrarla por consola
         </p>
         <SyntaxHighlighter language="cpp" style={oneDark}>
             {codigo1}
         </SyntaxHighlighter>
-        <p className="text-gray-700 text-justify mb-8 leading-relaxed">
+        <p className="parrafo">
             Declarar una variable y asignarle un valor
         </p>
         <SyntaxHighlighter language="cpp" style={oneDark}>
             {codigo2}
         </SyntaxHighlighter>
-        <p className="text-gray-700 text-justify mb-8 leading-relaxed">
+        <p className="parrafo">
             ¿Cuál es la diferencia? <br />
             El método de realizarlo, cualquiera de los dos métodos es correcto,
             pero lo adecuado es trabajar con variables. <br />
@@ -103,7 +104,7 @@ void loop() {
         <SyntaxHighlighter language="cpp" style={oneDark}>
             {'int Numero1 = 5;'}
         </SyntaxHighlighter>
-        <p className="text-gray-700 text-justify mb-8 leading-relaxed">
+        <p className="parrafo">
             En este caso es un tipo de dato entero y su nombre será Numero1 (Tenemos que recordar
             que puede ser asignado cualquier nombre), y tiene el valor de 5. <br />
             Lo mismo pasa en
@@ -111,20 +112,20 @@ void loop() {
         <SyntaxHighlighter language="cpp" style={oneDark}>
             {'int Numero2 = 2;'}
         </SyntaxHighlighter>
-        <p className="text-gray-700 text-justify mb-8 leading-relaxed">
+        <p className="parrafo">
             La siguiente es la variable de resultado que lo que hace es almacenar la suma de Numero1
             + Numero2
         </p>
         <SyntaxHighlighter language="cpp" style={oneDark}>
             {'int Resultado = Numero1 + Numero2;'}
         </SyntaxHighlighter>
-        <p className="text-gray-700 text-justify mb-8 leading-relaxed">
+        <p className="parrafo">
             Y por último imprimimos la variable de resultado
         </p>
         <SyntaxHighlighter language="cpp" style={oneDark}>
             {'Serial.println(Resultado);'}
         </SyntaxHighlighter>
-        <p className="text-gray-700 text-justify mb-8 leading-relaxed">
+        <p className="parrafo">
             Siguiendo la siguiente estructura, que lo que hace en la línea 9 es mostrar un mensaje
             (Resultado de la suma es: ) sin dar un salto de línea, y en la 10 muestra el valor de la suma,
             pero añade un salto de línea.

@@ -3,6 +3,8 @@ import Arduino001P01Component from "./Arduino001_P01Component";
 import Arduino001P02Component from "./Arduino001_P02Component";
 import Arduino001P03Component from "./Arduino001_P03Component";
 import Arduino001P04Component from "./Arduino001_P04Component";
+import Arduino001P05Component from "./Arduino001_P05Component";
+import Arduino001P06Component from "./Arduino001_P06Component";
 
 function Arduino001(){
     const [page, setPage] = useState(0);
@@ -33,22 +35,24 @@ function Arduino001(){
                     <a href="#inicio" onClick={(e) => { e.preventDefault(); setPage(2); }} className=" hover:text-blue-600 font-bold hover:bg-gray-50 py-2 rounded transition-colors">Variables</a>
                     <a href="#inicio" onClick={(e) => { e.preventDefault(); setPage(3); }} className=" hover:text-blue-600 font-bold hover:bg-gray-50 py-2 rounded transition-colors">Estructuras con operadores</a>
                     <a href="#inicio" onClick={(e) => { e.preventDefault(); setPage(4); }} className=" hover:text-blue-600 font-bold hover:bg-gray-50 py-2 rounded transition-colors">Estructuras con comparadores</a>
+                    <a href="#inicio" onClick={(e) => { e.preventDefault(); setPage(5); }} className=" hover:text-blue-600 font-bold hover:bg-gray-50 py-2 rounded transition-colors">Ámbito de variables y operadores</a>
+                    <a href="#inicio" onClick={(e) => { e.preventDefault(); setPage(6); }} className=" hover:text-blue-600 font-bold hover:bg-gray-50 py-2 rounded transition-colors">Funciones</a>
                     <a href="#Referencias" className="text-gray-600 hover:text-blue-600 hover:bg-gray-50 p-2 rounded transition-colors">Referencias</a>
                 </div>
                 
                 <div className="w-full md:w-5/6">
                     {page === 0 ?<div>
-                        <h1 id="inicio" className="text-2xl font-bold text-gray-800 mb-4 pt-2">Introducción</h1>
-                        <h2 className="text-xl font-semibold text-gray-700 mb-3">¿Qué es Arduino?</h2>
-                        <p className="text-gray-700 text-justify mb-8 leading-relaxed">
+                        <h1 id="inicio" className="titulo-principal">Introducción</h1>
+                        <h2 className="subtitulo">¿Qué es Arduino?</h2>
+                        <p className="parrafo">
                             Arduino es una plataforma de desarrollo basada en una placa electrónica de hardware libre
                             que incorpora un microcontrolador re-programable y una serie de pines hembra. Estos
                             permiten establecer conexiones entre el microcontrolador y los diferentes sensores y
                             actuadores de una manera muy sencilla (principalmente con cables dupont) (Aguayo, 2014).
                         </p>
-                        <h1 id="Titulo2" className="text-2xl font-bold text-gray-800 mb-4 pt-2">Arduino UNO</h1>
-                        <h2 className="text-xl font-semibold text-gray-700 mb-3">¿Qué es Arduino UNO?</h2>
-                        <p className="text-gray-700 text-justify mb-8 leading-relaxed">
+                        <h1 id="Titulo2" className="titulo-principal">Arduino UNO</h1>
+                        <h2 className="subtitulo">¿Qué es Arduino UNO?</h2>
+                        <p className="parrafo">
                             La placa Arduino UNO es la mejor placa para iniciar con la programación y la electrónica.
                             Si es tu primera experiencia con la plataforma Arduino, la Arduino UNO es la opción más
                             robusta, más usada y con mayor cantidad de documentación de toda la familia Arduino.
@@ -60,7 +64,7 @@ function Arduino001(){
                             opere, simplemente hay que conectarlo a la energía por el puerto USB o con un transformador
                             AC-DC (Aguayo, 2019).
                         </p>
-                        <div className="flex justify-center items-center">
+                        <div className="contenedor-imgen">
                             <img src="/arduino_img/arduinop1/arduino.png" className="w-full md:w-1/2 h-auto"  alt="Placa Arduino UNO" />
                         </div>
                         <p> 
@@ -73,11 +77,11 @@ function Arduino001(){
                                     Pines de arduino
                             </a>
                         </p>
-                        <h1 id="Titulo3" className="text-2xl font-bold text-gray-800 mb-4 pt-2">Wokwi</h1>
-                        <p className="text-gray-700 text-justify mb-8 leading-relaxed">
+                        <h1 id="Titulo3" className="titulo-principal">Wokwi</h1>
+                        <p className="parrafo">
                             Para aprender a trabajar con Arduino utilizaremos el simulador Wokwi que es una plataforma online:
                         </p>
-                        <div className="flex justify-center items-center">
+                        <div className="contenedor-imgen">
                             <img src="/arduino_img/arduinop1/sitio.png" className="w-full md:w-1/2 h-auto"  alt="Sitio" />
                         </div>
                         <p> 
@@ -90,53 +94,53 @@ function Arduino001(){
                                     Wokwi
                             </a>
                         </p>
-                        <p className="text-gray-700 text-justify mb-8 leading-relaxed">
+                        <p className="parrafo">
                             En la parte de abajo encontraremos lo siguiente.
                         </p>
-                        <div className="flex justify-center items-center">
+                        <div className="contenedor-imgen">
                             <img src="/arduino_img/arduinop1/mesas.png" className="w-full md:w-1/2 h-auto"  alt="Mesas de trabajo" />
                         </div>
-                        <p className="text-gray-700 text-justify mb-8 leading-relaxed">
+                        <p className="parrafo">
                             Y accederemos al Arduino UNO para comenzar.
                         </p>
-                        <div className="flex justify-center items-center">
+                        <div className="contenedor-imgen">
                             <img src="/arduino_img/arduinop1/simulador.png" className="w-full md:w-1/2 h-auto"  alt="Simulador" />
                         </div>
-                        <p className="text-gray-700 text-justify mb-8 leading-relaxed">
+                        <p className="parrafo">
                             En el simulador tenemos dos partes.
                         </p>
-                        <p className="text-gray-700 text-justify mb-8 leading-relaxed">
+                        <p className="parrafo">
                             El editor de código.
                         </p>
-                        <div className="flex justify-center items-center">
+                        <div className="contenedor-imgen">
                             <img src="/arduino_img/arduinop1/codigo.png" className="w-full md:w-1/2 h-auto"  alt="Código" />
                         </div>
-                        <p className="text-gray-700 text-justify mb-8 leading-relaxed">
+                        <p className="parrafo">
                             Y el simulador:
                         </p>
-                        <div className="flex justify-center items-center">
+                        <div className="contenedor-imgen">
                             <img src="/arduino_img/arduinop1/placa.png" className="w-full md:w-1/2 h-auto"  alt="Placa" />
                         </div>
-                        <h2 className="text-xl font-semibold text-gray-700 mb-3">Partes del código</h2>
-                        <p className="text-gray-700 text-justify mb-8 leading-relaxed">
+                        <h2 className="subtitulo">Partes del código</h2>
+                        <p className="parrafo">
                             En la programación con Arduino tenemos dos funciones principales.
                         </p>
-                        <p className="text-gray-700 text-justify mb-8 leading-relaxed">
+                        <p className="parrafo">
                             Primero tenemos el:
                         </p>
-                        <div className="flex justify-center items-center">
+                        <div className="contenedor-imgen">
                             <img src="/arduino_img/arduinop1/setup.png" className="w-full md:w-1/2 h-auto"  alt="Setup" />
                         </div>
-                        <p className="text-gray-700 text-justify mb-8 leading-relaxed">
+                        <p className="parrafo">
                             Hace referencia a que todo lo que escribamos aquí se va a ejecutar solo una vez, esta función normalmente se ocupa para las configuraciones iniciales.
                         </p>
-                        <p className="text-gray-700 text-justify mb-8 leading-relaxed">
+                        <p className="parrafo">
                             Y después tenemos el:
                         </p>
-                        <div className="flex justify-center items-center">
+                        <div className="contenedor-imgen">
                             <img src="/arduino_img/arduinop1/loop.png" className="w-full md:w-1/2 h-auto"  alt="Loop" />
                         </div>
-                        <p className="text-gray-700 text-justify mb-8 leading-relaxed">
+                        <p className="parrafo">
                             Esta función se ejecutará después del void setup(), y se ejecutará todo el tiempo a diferencia del anterior que solo se ejecuta una vez.
                         </p> 
                     </div> : null}
@@ -152,8 +156,14 @@ function Arduino001(){
                     {page === 4 ?
                         <Arduino001P04Component />
                     : null}
+                    {page === 5 ?
+                        <Arduino001P05Component />
+                    : null}
+                    {page === 6 ?
+                        <Arduino001P06Component />
+                    : null}
 
-                    <h1 id="Referencias" className="text-2xl font-bold text-gray-800 mb-4 pt-2">Referencias</h1>
+                    <h1 id="Referencias" className="titulo-principal">Referencias</h1>
                     <div className="flex flex-col gap-2 text-gray-600 text-sm">
                         <p>
                             Aguayo, P. (2014, noviembre 20). ¿Qué es Arduino? Arduino.cl - Compra tu Arduino en Línea; Arduino.cl. <a href="https://arduino.cl/que-es-arduino/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">https://arduino.cl/que-es-arduino/</a>

@@ -31,15 +31,15 @@ void loop() {
 }`;
     return (
         <>
-        <h1 id="inicio" className="text-2xl font-bold text-gray-800 mb-4 pt-2">Práctica 2: Variables</h1>
-        <p className="text-gray-700 text-justify mb-8 leading-relaxed">
+        <h1 id="inicio" className="titulo-principal">Práctica 2: Variables</h1>
+        <p className="parrafo">
             En la segunda práctica trabajaremos con variables. <br />
             Trabajaremos en la función loop().
         </p>
         <SyntaxHighlighter language="cpp" style={oneDark}>
             {codigo1}
         </SyntaxHighlighter>
-        <p className="text-gray-700 text-justify mb-8 leading-relaxed">
+        <p className="parrafo">
             Tenemos diferentes tipos de datos
         </p>
         <div className="relative overflow-x-auto shadow-md sm:rounded-lg mb-8">
@@ -107,21 +107,22 @@ void loop() {
                 </tr>
             </tbody>
         </table>
-        <p className="text-gray-700 text-justify mb-8 leading-relaxed">
+        <br />
+        <p className="parrafo">
             La sintaxis para declarar una variable es:
         </p>
-        <p className="text-gray-700 text-center mb-8 leading-relaxed">
+        <p className="parrafo">
             <span className="text-red-700">Tipo_dato </span>
             <span className="text-blue-700">nombre  </span>
             <span className="text-green-700">= valor; </span>
         </p>
-        <p className="text-gray-700 text-justify mb-8 leading-relaxed">
+        <p className="parrafo">
             Para declarar una variable de tipo numérico, sería:
         </p>
         <SyntaxHighlighter language="cpp" style={oneDark}>
             {codigo2}
         </SyntaxHighlighter>
-        <p className="text-gray-700 text-justify mb-8 leading-relaxed">
+        <p className="parrafo">
             Y para poder verla en la consola:
         </p>
         <SyntaxHighlighter language="cpp" style={oneDark}>
