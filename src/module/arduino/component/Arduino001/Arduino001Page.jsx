@@ -5,6 +5,9 @@ import Arduino001P03Component from "./Arduino001_P03Component";
 import Arduino001P04Component from "./Arduino001_P04Component";
 import Arduino001P05Component from "./Arduino001_P05Component";
 import Arduino001P06Component from "./Arduino001_P06Component";
+import Arduino001P07Component from "./Arduino001_P07Component";
+import Arduino001P08Component from "./Arduino001_P08Component";
+import Arduino001P09Component from "./Arduino001_P09Component";
 
 function Arduino001(){
     const [page, setPage] = useState(0);
@@ -37,6 +40,9 @@ function Arduino001(){
                     <a href="#inicio" onClick={(e) => { e.preventDefault(); setPage(4); }} className=" hover:text-blue-600 font-bold hover:bg-gray-50 py-2 rounded transition-colors">Estructuras con comparadores</a>
                     <a href="#inicio" onClick={(e) => { e.preventDefault(); setPage(5); }} className=" hover:text-blue-600 font-bold hover:bg-gray-50 py-2 rounded transition-colors">Ámbito de variables y operadores</a>
                     <a href="#inicio" onClick={(e) => { e.preventDefault(); setPage(6); }} className=" hover:text-blue-600 font-bold hover:bg-gray-50 py-2 rounded transition-colors">Funciones</a>
+                    <a href="#inicio" onClick={(e) => { e.preventDefault(); setPage(7); }} className=" hover:text-blue-600 font-bold hover:bg-gray-50 py-2 rounded transition-colors">Ciclo For</a>
+                    <a href="#inicio" onClick={(e) => { e.preventDefault(); setPage(8); }} className=" hover:text-blue-600 font-bold hover:bg-gray-50 py-2 rounded transition-colors">While y do while</a>
+                    
                     <a href="#Referencias" className="text-gray-600 hover:text-blue-600 hover:bg-gray-50 p-2 rounded transition-colors">Referencias</a>
                 </div>
                 
@@ -162,6 +168,16 @@ function Arduino001(){
                     {page === 6 ?
                         <Arduino001P06Component />
                     : null}
+                    {page === 7 ?
+                        <Arduino001P07Component />
+                    : null}
+                    {page === 8 ?
+                        <Arduino001P08Component />
+                    : null}
+                    {page === 9 ?
+                        <Arduino001P09Component />
+                    : null}
+
 
                     <h1 id="Referencias" className="titulo-principal">Referencias</h1>
                     <div className="flex flex-col gap-2 text-gray-600 text-sm">

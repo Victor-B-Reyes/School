@@ -109,7 +109,7 @@ function HomePage(){
                         </div>
                     </div>
                 </div>
-                <h1 className="text-4xl font-bold text-center my-8">Cursos</h1>
+                <h1 className="text-4xl font-bold text-center my-8" id="Cursos">Cursos</h1>
                 <Navbar />
                 <div className="container mx-auto px-4">
                 {location.pathname === '/' ? 
