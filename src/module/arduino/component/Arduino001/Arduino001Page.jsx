@@ -8,6 +8,7 @@ import Arduino001P06Component from "./Arduino001_P06Component";
 import Arduino001P07Component from "./Arduino001_P07Component";
 import Arduino001P08Component from "./Arduino001_P08Component";
 import Arduino001P09Component from "./Arduino001_P09Component";
+import Arduino001P10Component from "./Arduino001_P10Component";
 
 function Arduino001(){
     const [page, setPage] = useState(0);
@@ -42,7 +43,8 @@ function Arduino001(){
                     <a href="#inicio" onClick={(e) => { e.preventDefault(); setPage(6); }} className=" hover:text-blue-600 font-bold hover:bg-gray-50 py-2 rounded transition-colors">Funciones</a>
                     <a href="#inicio" onClick={(e) => { e.preventDefault(); setPage(7); }} className=" hover:text-blue-600 font-bold hover:bg-gray-50 py-2 rounded transition-colors">Ciclo For</a>
                     <a href="#inicio" onClick={(e) => { e.preventDefault(); setPage(8); }} className=" hover:text-blue-600 font-bold hover:bg-gray-50 py-2 rounded transition-colors">While y do while</a>
-                    
+                    <a href="#inicio" onClick={(e) => { e.preventDefault(); setPage(9); }} className=" hover:text-blue-600 font-bold hover:bg-gray-50 py-2 rounded transition-colors">Operadores lógicos</a>
+                    <a href="#inicio" onClick={(e) => { e.preventDefault(); setPage(10); }} className=" hover:text-blue-600 font-bold hover:bg-gray-50 py-2 rounded transition-colors">Switch case</a>
                     <a href="#Referencias" className="text-gray-600 hover:text-blue-600 hover:bg-gray-50 p-2 rounded transition-colors">Referencias</a>
                 </div>
                 
@@ -177,8 +179,10 @@ function Arduino001(){
                     {page === 9 ?
                         <Arduino001P09Component />
                     : null}
-
-
+                    {page === 10 ?
+                        <Arduino001P10Component />
+                    : null}
+                    
                     <h1 id="Referencias" className="titulo-principal">Referencias</h1>
                     <div className="flex flex-col gap-2 text-gray-600 text-sm">
                         <p>
@@ -186,6 +190,12 @@ function Arduino001(){
                         </p>
                         <p>
                             Aguayo, P. (2019, enero 14). Arduino UNO. Arduino.cl - Compra tu Arduino en Línea; Arduino.cl. <a href="https://arduino.cl/arduino-uno/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">https://arduino.cl/arduino-uno/</a>
+                        </p>
+                        <p>
+                            Serial.Begin(). (s/f). Arduino.Cc. Recuperado el 18 de noviembre de 2024, de <a href="https://www.arduino.cc/reference/es/language/functions/communication/serial/begin/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">https://www.arduino.cc/reference/es/language/functions/communication/serial/begin/</a>
+                        </p>
+                        <p>
+                            Delay(). (s/f). Arduino.Cc. Recuperado el 18 de noviembre de 2024, de <a href="https://www.arduino.cc/reference/es/language/functions/time/delay/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">https://www.arduino.cc/reference/es/language/functions/time/delay/</a>
                         </p>
                     </div>
                 </div>

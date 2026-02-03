@@ -11,9 +11,38 @@ function HomePage(){
     return(
     <div>
         <Header />
-        <div className="bg-white text-white min-h-screen">
-            <main className="pb-2">
-                <div className="w-full text-gray-800 mb-8 bg-cover bg-center" style={{ backgroundImage: "url(./server.jpg)" }}>
+        <div className="bg-gray-50 text-gray-800 min-h-screen">
+            <main className="">
+                <div className="bg-gray-900 text-white py-16 px-6 shadow-lg mb-8">
+                    <div className="max-w-4xl mx-auto text-center flex flex-col items-center">
+                        <img src="/Logo.png" alt="Logo" className="w-40 h-auto object-contain mb-6" />
+                        <p className="text-xl md:text-3xl font-light leading-relaxed">
+                            Bienvenido a mi <span className="font-bold text-blue-400">plataforma educativa</span> y portafolio profesional.
+                            <br />
+                            <span className="text-gray-300 text-lg md:text-xl mt-2 block">Aquí encontrarás cursos prácticos y recursos para potenciar tus habilidades en tecnología.</span>
+                        </p>
+                    </div>
+                </div>
+                <h1 className="text-4xl font-bold text-center py-4 text-white" id="Cursos">Cursos</h1>
+                <Navbar />
+                <div className="container mx-auto px-4 pb-6">
+                {location.pathname === '/' ? 
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-8">
+                    {cursos.map((curso) => (
+                        <CardComponet 
+                            key={curso.id}
+                            title={curso.title}
+                            description={curso.description}
+                            imageUrl={curso.imageUrl}
+                            seccion={curso.seccion}
+                            type={curso.type}
+                            identifier={curso.identifier}
+                        />
+                    ))}
+                </div> 
+                : <Outlet />}
+                </div>
+                <div className="w-full text-gray-800 bg-cover bg-center" style={{ backgroundImage: "url(./server.jpg)" }}>
                     <div className="max-w-6xl mx-auto px-4 sm:px-6 py-10">
                         <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
                             {/* Header / Profile */}
@@ -109,25 +138,7 @@ function HomePage(){
                         </div>
                     </div>
                 </div>
-                <h1 className="text-4xl font-bold text-center my-8" id="Cursos">Cursos</h1>
-                <Navbar />
-                <div className="container mx-auto px-4">
-                {location.pathname === '/' ? 
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-8">
-                    {cursos.map((curso) => (
-                        <CardComponet 
-                            key={curso.id}
-                            title={curso.title}
-                            description={curso.description}
-                            imageUrl={curso.imageUrl}
-                            seccion={curso.seccion}
-                            type={curso.type}
-                            identifier={curso.identifier}
-                        />
-                    ))}
-                </div> 
-                : <Outlet />}
-                </div>
+                
             </main>
         </div>
         <Footer/>
