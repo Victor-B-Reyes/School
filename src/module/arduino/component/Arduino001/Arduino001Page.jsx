@@ -44,6 +44,9 @@ function Arduino001(){
                     <a href="#inicio" onClick={(e) => { e.preventDefault(); setPage(7); }} className=" hover:text-blue-600 font-bold hover:bg-gray-50 py-2 rounded transition-colors">Ciclo For</a>
                     <a href="#inicio" onClick={(e) => { e.preventDefault(); setPage(8); }} className=" hover:text-blue-600 font-bold hover:bg-gray-50 py-2 rounded transition-colors">While y do while</a>
                     <a href="#inicio" onClick={(e) => { e.preventDefault(); setPage(9); }} className=" hover:text-blue-600 font-bold hover:bg-gray-50 py-2 rounded transition-colors">Operadores lógicos</a>
+                    <a href="#Titulo4" onClick={(e) => { e.preventDefault(); setPage(9); const element = document.getElementById('Titulo4'); setTimeout(() => element?.scrollIntoView({ behavior: 'smooth' }), 0); }} className="text-gray-600 hover:text-blue-600 hover:bg-gray-50 p-2 rounded transition-colors">AND</a>
+                    <a href="#Titulo5" onClick={(e) => { e.preventDefault(); setPage(9); const element = document.getElementById('Titulo5'); setTimeout(() => element?.scrollIntoView({ behavior: 'smooth' }), 0); }} className="text-gray-600 hover:text-blue-600 hover:bg-gray-50 p-2 rounded transition-colors">OR</a>
+                    <a href="#Titulo6" onClick={(e) => { e.preventDefault(); setPage(9); const element = document.getElementById('Titulo6'); setTimeout(() => element?.scrollIntoView({ behavior: 'smooth' }), 0); }} className="text-gray-600 hover:text-blue-600 hover:bg-gray-50 p-2 rounded transition-colors">NOT</a>
                     <a href="#inicio" onClick={(e) => { e.preventDefault(); setPage(10); }} className=" hover:text-blue-600 font-bold hover:bg-gray-50 py-2 rounded transition-colors">Switch case</a>
                     <a href="#Referencias" className="text-gray-600 hover:text-blue-600 hover:bg-gray-50 p-2 rounded transition-colors">Referencias</a>
                 </div>

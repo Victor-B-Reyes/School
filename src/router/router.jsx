@@ -5,8 +5,11 @@ import HomePage from "../module/home/page/homePage";
 
 import ArduinoPage from "../module/arduino/page/arduinoPage";
 import Arduino001 from "../module/arduino/component/Arduino001/Arduino001Page";
+
 import DebianPage from "../module/debian/page/debianPage";
 
+import FundamentosPage from "../module/fundamentos/page/fundamentosPage";
+import Fundamentos001 from "../module/fundamentos/component/fundamentos001/fundamentos001Page";
 
 function ScrollToTop() {
     const { pathname } = useLocation();
@@ -26,6 +29,9 @@ function Enrutamiento(){
             <Route path="/" element={<HomePage/>}/>
             <Route path="/Arduino" element={<ArduinoPage/>}>
                 <Route path="Arduino_intro" element={<Arduino001/>}/>
+            </Route>
+            <Route path="/Fundamentos" element={<FundamentosPage/>}>
+                <Route path="Fundamentos_intro" element={<Fundamentos001/>}/>
             </Route>
             <Route path="/Debian" element={<DebianPage/>}>
             </Route>

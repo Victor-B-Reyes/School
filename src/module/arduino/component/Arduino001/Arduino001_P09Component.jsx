@@ -25,7 +25,7 @@ const codigo3 =
             devolver un resultado booleano. Dependiendo del operador utilizado (AND, OR o NOT), se 
             ejecutará la tabla de verdad correspondiente.
         </p>
-        <h2 className="subtitulo">El operador AND</h2>
+        <h2 id="Titulo4" className="subtitulo">El operador AND</h2>
         <p className="texto-parrafo">
             El operador AND, también conocido como “y”, consiste en que cuando ambas expresiones se cumplen, 
             devolverá un valor verdadero; de lo contrario, devolverá falso. <br />
@@ -77,7 +77,7 @@ const codigo3 =
             Debido a que el operador AND requiere que ambas expresiones se cumplan, el resultado (X) será false.
         </p>
         <br />
-         <h2 className="subtitulo">El operador OR</h2>
+         <h2 id="Titulo5" className="subtitulo">El operador OR</h2>
         <p className="texto-parrafo">
             El operador OR, también conocido como “o”, consiste en que cuando al menos una de las expresiones 
             se cumple, el resultado será verdadero. <br />
@@ -129,7 +129,7 @@ const codigo3 =
             Debido a que el operador OR requiere que solo una expresión se cumpla, el resultado (X) será true.
         </p>
         <br />
-        <h2 className="subtitulo">El operador NOT</h2>
+        <h2 id="Titulo6" className="subtitulo">El operador NOT</h2>
         <p className="texto-parrafo">
             El operador NOT, también conocido como “negación”, consiste en la negación del valor de una expresión.<br />
             <strong>Ejemplo:</strong><br /> <br />
