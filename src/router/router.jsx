@@ -9,7 +9,7 @@ import Arduino001 from "../module/arduino/component/Arduino001/Arduino001Page";
 import DebianPage from "../module/debian/page/debianPage";
 
 import FundamentosPage from "../module/fundamentos/page/fundamentosPage";
-import Fundamentos001 from "../module/fundamentos/component/fundamentos001/fundamentos001Page";
+import Fundamentos001 from "../module/fundamentos/component/Fundamentos001/Fundamentos001Page";
 
 function ScrollToTop() {
     const { pathname } = useLocation();

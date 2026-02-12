@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import Fundamentos001P01Component from "../Fundamentos001/Fundamentos001_P01Component";
+import Fundamentos001P01Component from "./Fundamentos001_P01Component";
 
 
 
