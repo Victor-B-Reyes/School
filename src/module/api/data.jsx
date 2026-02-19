@@ -9,7 +9,7 @@ export const cursos = [
     "type": "Free",
     "identifier": "Arduino_intro"
   },
-  {
+  /*{
     "id": 2,
     "cap": "Fundamentos001",
     "title": "Lógica de programación",
@@ -18,6 +18,6 @@ export const cursos = [
     "seccion": "Fundamentos",
     "type": "Free",
     "identifier": "Fundamentos_intro"
-  },
+  },*/
   
 ];
