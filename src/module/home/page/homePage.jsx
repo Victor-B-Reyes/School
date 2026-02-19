@@ -51,7 +51,7 @@ function HomePage(){
                                     <div className="w-40 h-40 mb-4 rounded-full border-4 border-blue-500 overflow-hidden shadow-lg">
                                         <img 
                                             className="w-full h-full object-cover" 
-                                            src="./Avatar.png" 
+                                            src="./Avatar2.png" 
                                             alt="Foto de Víctor"
                                         />
                                     </div>
