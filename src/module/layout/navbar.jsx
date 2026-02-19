@@ -18,9 +18,6 @@ function Navbar(){
                     <button className={getButtonClass('/')} onClick={() => navigate('/')}>
                         Home
                     </button>
-                    <button className={getButtonClass('/Fundamentos')} onClick={() => navigate('/Fundamentos')}>
-                        Fundamentos
-                    </button>
                     <button className={getButtonClass('/Arduino')} onClick={() => navigate('/Arduino')}>
                         Arduino
                     </button>
