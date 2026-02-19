@@ -18,6 +18,17 @@ export const cursos = [
     "seccion": "Fundamentos",
     "type": "Free",
     "identifier": "Fundamentos_intro"
-  },*/
+  },
+  {
+    "id": 2,
+    "cap": "Fundamentos001",
+    "title": "Lógica de programación",
+    "description": "Aprende los fundamentos de la programación.",
+    "imageUrl": "DigFlu.png",
+    "seccion": "Fundamentos",
+    "type": "Free",
+    "identifier": "Fundamentos_intro"
+  },
+  */
   
 ];
