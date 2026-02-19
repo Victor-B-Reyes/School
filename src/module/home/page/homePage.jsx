@@ -51,11 +51,11 @@ function HomePage(){
                                     <div className="w-40 h-40 mb-4 rounded-full border-4 border-blue-500 overflow-hidden shadow-lg">
                                         <img 
                                             className="w-full h-full object-cover" 
-                                            src="./img/NoImg.jpg" 
+                                            src="./Avatar.png" 
                                             alt="Foto de Víctor"
                                         />
                                     </div>
-                                    <h1 className="text-3xl font-bold mb-2">Víctor B.R.</h1>
+                                    <h1 className="text-3xl font-bold mb-2">Victor Blanco Reyes</h1>
                                     <p className="text-blue-400 font-medium mb-4">Desarrollador Full Stack</p>
                                     <div className="space-y-2 text-sm text-gray-300">
                                         <a href="mailto:victor_blanco_reyes@outlook.com" className="block hover:text-white transition-colors">
@@ -63,6 +63,9 @@ function HomePage(){
                                         </a>
                                         <a href="https://wa.me/message/SASRL3RSQKZQA1" target="_blank" rel="noopener noreferrer" className="block hover:text-white transition-colors">
                                             +52 921 306 8558
+                                        </a>
+                                        <a href="https://www.youtube.com/@Mr_White_Dev" target="_blank" rel="noopener noreferrer" className="block hover:text-white transition-colors">
+                                            youtube/@Mr_White_Dev
                                         </a>
                                     </div>
                                 </div>

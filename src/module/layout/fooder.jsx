@@ -1,4 +1,4 @@
-import { Phone, Mail } from "lucide-react";
+import { Phone, Mail, Youtube } from "lucide-react";
 function Footer (){
     return(
     <footer className="bg-gray-900 text-white pt-10 pb-5">
@@ -22,6 +22,10 @@ function Footer (){
                 <a href="mailto:victor_blanco_reyes@outlook.com" className="flex items-center gap-3 text-lg hover:text-indigo-400 transition-colors">
                   <Mail />
                   <span>victor_blanco_reyes@outlook.com</span>
+                </a>
+                <a href="https://www.youtube.com/@Mr_White_Dev" target="_blank" className="flex items-center gap-3 text-lg hover:text-indigo-400 transition-colors">
+                  <Youtube />
+                  <span>@Mr_White_Dev</span>
                 </a>
               </div>
             </div>
