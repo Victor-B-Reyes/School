@@ -37,6 +37,7 @@ function HomePage(){
                             seccion={curso.seccion}
                             type={curso.type}
                             identifier={curso.identifier}
+                            finish={curso.finish}
                         />
                     ))}
                 </div> 

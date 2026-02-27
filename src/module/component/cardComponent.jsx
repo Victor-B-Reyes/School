@@ -1,5 +1,5 @@
 import { useNavigate, Outlet, useLocation } from "react-router-dom";
-function CardComponet({ title, description, imageUrl, seccion, type, identifier}){
+function CardComponet({ title, description, imageUrl, seccion, type, identifier, finish }) {
     const navigate = useNavigate()
     const location = useLocation()
     console.log(type);
@@ -16,10 +16,10 @@ function CardComponet({ title, description, imageUrl, seccion, type, identifier}
                     {description}
                 </p>
             </div>
-            {type ===  "Blocked" ? (
+            {!finish ? (
             <div className="px-6 pt-4 pb-4 mt-auto">
                 <button disabled className="w-full bg-gray-400 cursor-not-allowed text-white font-bold py-2 px-4 rounded-lg">
-                    Ver más
+                    Proximamente..
                 </button>
             </div>) : (
                 <div className="px-6 pt-4 pb-4 mt-auto">
