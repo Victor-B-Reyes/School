@@ -22,16 +22,15 @@ export const cursos = [
     "finish": false
   },/*
   {
-    "id": 2,
-    "cap": "Fundamentos001",
-    "title": "Lógica de programación",
-    "description": "Aprende los fundamentos de la programación.",
+    "id": 3,
+    "cap": "Frontend001",
+    "title": "Desarrollo Frontend",
+    "description": "Aprende los fundamentos del desarrollo frontend.",
     "imageUrl": "DigFlu.png",
-    "seccion": "Fundamentos",
-    "type": "Free",
-    "identifier": "Fundamentos_intro",
+    "seccion": "Frontend",
+    "type": "",
+    "identifier": "Frontend_intro",
     "finish": false
-  },
-  */
+  },*/
   
 ];

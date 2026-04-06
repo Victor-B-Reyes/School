@@ -30,6 +30,7 @@ function ArduinoPage(){
                             seccion={curso.seccion}
                             type={curso.type}
                             identifier={curso.identifier}
+                            finish={curso.finish}
                         />
                     ))}
                 </div> : <Outlet />}
