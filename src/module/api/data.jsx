@@ -20,7 +20,7 @@ export const cursos = [
     "type": "Free",
     "identifier": "Fundamentos_intro",
     "finish": false
-  },/*
+  },
   {
     "id": 3,
     "cap": "Frontend001",
@@ -28,9 +28,20 @@ export const cursos = [
     "description": "Aprende los fundamentos del desarrollo frontend.",
     "imageUrl": "DigFlu.png",
     "seccion": "Frontend",
-    "type": "",
+    "type": "Subscription",
     "identifier": "Frontend_intro",
-    "finish": false
-  },*/
+    "finish": true
+  },
+  {
+    "id": 4,
+    "cap": "IA001",
+    "title": "Curso IA Nivel Basico",
+    "description": "Aprende los fundamentos de la inteligencia artificial.",
+    "imageUrl": "DigFlu.png",
+    "seccion": "IA",
+    "type": "Free",
+    "identifier": "IA_basico",
+    "finish": true
+  },
   
 ];
