@@ -8,8 +8,7 @@ function CardComponet({ title, description, imageUrl, seccion, type, identifier,
         navigate(`/${seccion}/${identifier}`);
     }
     const SubscriptionPressed = () => {
-        console.log(`Subscription for "${identifier}" pressed.`);
-        navigate(`/subscription/${identifier}`);
+        navigate(`/login`);
     }
     return(
         <div className="w-full rounded-lg overflow-hidden shadow-2xl bg-white transform hover:-translate-y-2 transition-transform duration-300 flex flex-col">
@@ -41,7 +40,7 @@ function CardComponet({ title, description, imageUrl, seccion, type, identifier,
                         className="w-full bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-lg transition-all duration-300" 
                         onClick={SubscriptionPressed}
                     >
-                        Suscribirse
+                        Iniciar Sesión
                     </button>
                 </div>
             )}
