@@ -7,10 +7,11 @@ function Info() {
     curso: "",
     nombre: "",
     escolaridad: "",
+    institucion: "",
     contacto: ""
   });
   const retornar = () => {
-    navigate("/Login");
+    navigate("/");
   };
 
   const [error, setError] = useState("");
@@ -26,7 +27,7 @@ function Info() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    if (!form.curso || !form.nombre || !form.escolaridad || !form.contacto) {
+    if (!form.curso || !form.nombre || !form.escolaridad || !form.contacto || !form.institucion) {
       setError("Completa todos los campos");
       setSuccess("");
       return;
@@ -41,6 +42,7 @@ function Info() {
       curso: "",
       nombre: "",
       escolaridad: "",
+      institucion: "",
       contacto: ""
     });
   };
@@ -102,6 +104,16 @@ function Info() {
           className="w-full p-3 mb-4 rounded-xl bg-white/10 text-white placeholder-gray-300 border border-white/20 focus:outline-none focus:ring-2 focus:ring-blue-400"
         />
 
+        {/* Contacto */}
+        <input
+          type="text"
+          name="contacto"
+          placeholder="Teléfono o correo"
+          value={form.contacto}
+          onChange={handleChange}
+          className="w-full p-3 mb-6 rounded-xl bg-white/10 text-white placeholder-gray-300 border border-white/20 focus:outline-none focus:ring-2 focus:ring-blue-400"
+        />
+
         {/* Escolaridad */}
         <select
           name="escolaridad"
@@ -116,15 +128,18 @@ function Info() {
           <option value="otro" className="text-black">Otro</option>
         </select>
 
-        {/* Contacto */}
+        {/* Institucion */}
         <input
           type="text"
-          name="contacto"
-          placeholder="Teléfono o correo"
-          value={form.contacto}
+          name="institucion"
+          placeholder="Nombre de tu institución"
+          value={form.institucion}
           onChange={handleChange}
-          className="w-full p-3 mb-6 rounded-xl bg-white/10 text-white placeholder-gray-300 border border-white/20 focus:outline-none focus:ring-2 focus:ring-blue-400"
+          className="w-full p-3 mb-4 rounded-xl bg-white/10 text-white placeholder-gray-300 border border-white/20 focus:outline-none focus:ring-2 focus:ring-blue-400"
         />
+
+
+        
 
         {/* Botón */}
         <button

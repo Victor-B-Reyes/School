@@ -4,6 +4,8 @@ import { Route, Routes, useLocation, Navigate } from "react-router-dom";
 import HomePage from "../module/home/page/homePage";
 import Login from "../module/login/login";
 import Info from "../module/login/info";
+import Layout from "../module/layout/layout";
+import Dashboard from "../module/dashboard/page/dashboard";
 
 import ArduinoPage from "../module/arduino/page/arduinoPage";
 import Arduino001 from "../module/arduino/component/Arduino001/Arduino001Page";
@@ -51,6 +53,9 @@ function Enrutamiento(){
             </Route>
             <Route path="/Login" element={<Login/>} />
             <Route path="/Info" element={<Info/>} />
+
+            <Route path="/Home" element={<Layout/>}></Route>
+            <Route path="/School" element={<Layout/>}></Route>
             <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
         </>

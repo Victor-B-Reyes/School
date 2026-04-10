@@ -29,7 +29,7 @@ function Login() {
     // Simulación login
     if (form.email === "admin@edu.com" && form.password === "123456") {
       setError("");
-      navigate("/dashboard");
+      navigate("/Home");
     } else {
       setError("Credenciales incorrectas");
     }
@@ -45,9 +45,6 @@ function Login() {
       {/* LADO IZQUIERDO */}
       <div
         className="hidden md:flex w-1/2 items-center justify-center relative bg-cover bg-center"
-        style={{
-          backgroundImage: "url('/software.jpg')"
-        }}
       >
         {/* overlay futurista */}
         <div className="absolute inset-0 bg-black/70 backdrop-blur-sm"></div>
@@ -63,7 +60,11 @@ function Login() {
       </div>
 
       {/* LADO DERECHO */}
-      <div className="flex flex-col w-full md:w-1/2 items-center justify-center">
+      <div className="flex flex-col w-full md:w-1/2 items-center justify-center"
+      style={{
+          backgroundImage: "url('/software.jpg')"
+        }}
+      >
         
         <form
           onSubmit={handleSubmit}
@@ -72,7 +73,14 @@ function Login() {
           <h2 className="text-3xl font-bold text-center text-white mb-6">
             Iniciar Sesión
           </h2>
-
+          <div className="w-full mb-6">
+            <img
+              src="/Logo.png"
+              alt="Logo"
+              className="w-40 h-auto object-contain mb-6 mx-auto block"
+            />
+          </div>
+        
           {error && (
             <p className="text-red-400 text-sm text-center mb-4">
               {error}
