@@ -51,7 +51,7 @@ function Arduino001(){
                     <a href="#Referencias" className="text-gray-600 hover:text-blue-600 hover:bg-gray-50 p-2 rounded transition-colors">Referencias</a>
                 </div>
                 
-                <div className="w-full md:w-5/6">
+                <div className="w-full md:flex-1 min-w-0">
                     {page === 0 ?<div>
                         <h1 id="inicio" className="titulo-principal">Introducción</h1>
                         <h2 className="subtitulo">¿Qué es Arduino?</h2>
@@ -189,16 +189,16 @@ function Arduino001(){
                     <h1 id="Referencias" className="titulo-principal">Referencias</h1>
                     <div className="flex flex-col gap-2 text-gray-600 text-sm">
                         <p>
-                            Aguayo, P. (2014, noviembre 20). ¿Qué es Arduino? Arduino.cl - Compra tu Arduino en Línea; Arduino.cl. <a href="https://arduino.cl/que-es-arduino/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">https://arduino.cl/que-es-arduino/</a>
+                            Aguayo, P. (2014, noviembre 20). ¿Qué es Arduino? Arduino.cl - Compra tu Arduino en Línea; Arduino.cl. <a href="https://arduino.cl/que-es-arduino/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline break-all">https://arduino.cl/que-es-arduino/</a>
                         </p>
                         <p>
-                            Aguayo, P. (2019, enero 14). Arduino UNO. Arduino.cl - Compra tu Arduino en Línea; Arduino.cl. <a href="https://arduino.cl/arduino-uno/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">https://arduino.cl/arduino-uno/</a>
+                            Aguayo, P. (2019, enero 14). Arduino UNO. Arduino.cl - Compra tu Arduino en Línea; Arduino.cl. <a href="https://arduino.cl/arduino-uno/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline break-all">https://arduino.cl/arduino-uno/</a>
                         </p>
                         <p>
-                            Serial.Begin(). (s/f). Arduino.Cc. Recuperado el 18 de noviembre de 2024, de <a href="https://www.arduino.cc/reference/es/language/functions/communication/serial/begin/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">https://www.arduino.cc/reference/es/language/functions/communication/serial/begin/</a>
+                            Serial.Begin(). (s/f). Arduino.Cc. Recuperado el 18 de noviembre de 2024, de <a href="https://www.arduino.cc/reference/es/language/functions/communication/serial/begin/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline break-all">https://www.arduino.cc/reference/es/language/functions/communication/serial/begin/</a>
                         </p>
                         <p>
-                            Delay(). (s/f). Arduino.Cc. Recuperado el 18 de noviembre de 2024, de <a href="https://www.arduino.cc/reference/es/language/functions/time/delay/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">https://www.arduino.cc/reference/es/language/functions/time/delay/</a>
+                            Delay(). (s/f). Arduino.Cc. Recuperado el 18 de noviembre de 2024, de <a href="https://www.arduino.cc/reference/es/language/functions/time/delay/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline break-all">https://www.arduino.cc/reference/es/language/functions/time/delay/</a>
                         </p>
                     </div>
                 </div>

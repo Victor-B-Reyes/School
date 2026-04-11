@@ -25,8 +25,8 @@ function Sidebar(){
 
     return(
     <div
-    className={`h-screen bg-gray-900 text-white transition-all duration-300 flex flex-col justify-between ${
-    collapsed ? "w-20" : "w-64"
+    className={`h-screen bg-gray-900 text-white transition-all duration-300 flex flex-col justify-between z-50 fixed md:relative ${
+    collapsed ? "w-0 md:w-20 overflow-hidden -translate-x-full md:translate-x-0" : "w-64 translate-x-0 shadow-2xl"
     }`}
     >
 

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { cursos } from "../api/data";
+import { saveRegisterSolicitud } from "../api/registerSolicitud";
 function Info() {
     const navigate = useNavigate();
   const [form, setForm] = useState({
@@ -24,7 +25,7 @@ function Info() {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
     if (!form.curso || !form.nombre || !form.escolaridad || !form.contacto || !form.institucion) {
@@ -33,7 +34,19 @@ function Info() {
       return;
     }
 
-    console.log(form);
+    const dataToSend = {
+      id: 0,
+      date: new Date().toISOString(),
+      curso: form.curso,
+      escolaridad: form.escolaridad,
+      institucion: form.institucion,
+      nombre: form.nombre,
+      contacto: form.contacto,
+      atendido: false,
+      active: true
+    };
+
+    await saveRegisterSolicitud(dataToSend);
 
     setError("");
     setSuccess("Solicitud enviada 🚀");

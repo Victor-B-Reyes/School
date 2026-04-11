@@ -9,21 +9,27 @@ function Navbar(){
         if (isActive) {
             return `${baseClasses} bg-blue-600 text-white scale-105 border-b-4 border-blue-700`;
         }
-        return `${baseClasses} text-white border-b-4 border-blue-500 hover:bg-blue-600 hover:text-white hover:scale-105`;
+        return `${baseClasses} text-white border-b-4 border-blue-500 hover:bg-blue-600 hover:text-white md:hover:scale-105`;
     };
     return(
         <nav>
-            <ul className="flex justify-center items-center p-4 space-x-4 list-none">
+            <ul className="flex flex-wrap justify-center items-center p-4 gap-4 list-none">
                 <li>
                     <button className={getButtonClass('/')} onClick={() => navigate('/')}>
                         Home
                     </button>
+                </li>
+                <li>
                     <button className={getButtonClass('/Arduino')} onClick={() => navigate('/Arduino')}>
                         Arduino
                     </button>
+                </li>
+                <li>
                     <button className={getButtonClass('/IA')} onClick={() => navigate('/IA')}>
                         IA
                     </button>
+                </li>
+                <li>
                     <button className={getButtonClass('/Frontend')} onClick={() => navigate('/Frontend')}>
                         Frontend
                     </button>

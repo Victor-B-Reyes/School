@@ -35,7 +35,7 @@ function IA001(){
                     <a href="#inicio" onClick={(e) => { e.preventDefault(); setPage(5); }} className=" hover:text-blue-600 font-bold hover:bg-gray-50 py-2 rounded transition-colors">Clase 5</a>
                 </div>
                 
-                <div className="w-full md:w-5/6">
+                <div className="w-full md:flex-1 min-w-0">
                     {page === 0 ?<div>
                         <h1 id="inicio" className="titulo-principal">Introducción</h1>
                         <h2 className="subtitulo">Programación Asistida por Inteligencia Artificial</h2>
