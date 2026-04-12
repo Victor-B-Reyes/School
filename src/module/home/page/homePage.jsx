@@ -31,12 +31,14 @@ function HomePage(){
                     {cursos.map((curso) => (
                         <CardComponet 
                             key={curso.id}
+                            id={curso.id}
                             title={curso.title}
                             description={curso.description}
                             imageUrl={curso.imageUrl}
                             seccion={curso.seccion}
                             type={curso.type}
                             identifier={curso.identifier}
+                            fechaInicio={curso.fechaInicio}
                             finish={curso.finish}
                         />
                     ))}

@@ -8,6 +8,7 @@ export const cursos = [
     "seccion": "Arduino",
     "type": "Free",
     "identifier": "Arduino_intro",
+    "fechaInicio": "",
     "finish": true
   },
   {
@@ -19,6 +20,7 @@ export const cursos = [
     "seccion": "Fundamentos",
     "type": "Free",
     "identifier": "Fundamentos_intro",
+    "fechaInicio": "",
     "finish": false
   },
   {
@@ -30,7 +32,8 @@ export const cursos = [
     "seccion": "Frontend",
     "type": "Subscription",
     "identifier": "Frontend_intro",
-    "finish": true
+    "fechaInicio": "18/01/2026",
+    "finish": false
   },
   {
     "id": 4,
@@ -41,6 +44,7 @@ export const cursos = [
     "seccion": "IA",
     "type": "Free",
     "identifier": "IA_basico",
+    "fechaInicio": "",
     "finish": true
   },
   

@@ -24,11 +24,13 @@ function ArduinoPage(){
                     {arduinoCourses.map((curso) => (
                         <CardComponet 
                             key={curso.id}
+                            id={curso.id}
                             title={curso.title}
                             description={curso.description}
                             imageUrl={curso.imageUrl}
                             seccion={curso.seccion}
                             type={curso.type}
+                            fechaInicio={curso.fechaInicio}
                             identifier={curso.identifier}
                             finish={curso.finish}
                         />

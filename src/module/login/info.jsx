@@ -2,6 +2,8 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { cursos } from "../api/data";
 import { saveRegisterSolicitud } from "../api/registerSolicitud";
+import Header from "../layout/header";
+import Footer from "../layout/fooder";
 function Info() {
     const navigate = useNavigate();
   const [form, setForm] = useState({
@@ -70,7 +72,9 @@ function Info() {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center relative bg-cover bg-center" style={{
+    <div>
+      <Header />
+    <div className="h-[80vh] flex items-center justify-center relative bg-cover bg-center" style={{
           backgroundImage: "url('/server.jpg')"
         }}>
       
@@ -179,15 +183,19 @@ function Info() {
         >
           {loading ? "Procesando..." : "Enviar solicitud"}
         </button>
+      </form>
+
+      <div className="absolute bottom-10">
         <button
           onClick={retornar}
           type="button"
-          disabled={loading}
-          className="w-full py-3 mt-2 rounded-xl font-semibold text-white bg-gradient-to-r from-red-500 to-red-800 hover:scale-105 transition transform shadow-lg disabled:opacity-50"
+          className="text-gray-400 hover:text-white transition-colors cursor-pointer text-xs uppercase tracking-widest font-bold"
         >
-          Regresar
+          ← Volver al inicio
         </button>
-      </form>
+      </div>
+    </div>
+    <Footer />
     </div>
   );
 }

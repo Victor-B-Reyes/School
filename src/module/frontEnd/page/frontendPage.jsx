@@ -24,12 +24,14 @@ function FrontendPage(){
                     {frontendCourses.map((curso) => (
                         <CardComponet 
                             key={curso.id}
+                            id={curso.id}
                             title={curso.title}
                             description={curso.description}
                             imageUrl={curso.imageUrl}
                             seccion={curso.seccion}
                             type={curso.type}
                             finish={curso.finish}
+                            fechaInicio={curso.fechaInicio}
                             identifier={curso.identifier}
                         />
                     ))}

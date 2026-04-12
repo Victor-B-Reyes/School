@@ -20,6 +20,7 @@ import IA001 from "../module/IA/component/IA001/IA001Page";
 
 import FrontendPage from "../module/frontEnd/page/frontendPage";
 import Frontend001 from "../module/frontEnd/component/Frontend001/Frontend001Page";
+import CourseContent from "../module/component/courseContent";
 
 function ScrollToTop() {
     const { pathname } = useLocation();
@@ -53,7 +54,7 @@ function Enrutamiento(){
             </Route>
             <Route path="/Login" element={<Login/>} />
             <Route path="/Info" element={<Info/>} />
-
+            <Route path="/Proximamente/:id" element={<CourseContent/>} />
             <Route path="/Home" element={<Layout/>}></Route>
             <Route path="/School" element={<Layout/>}></Route>
             <Route path="*" element={<Navigate to="/" replace />} />
