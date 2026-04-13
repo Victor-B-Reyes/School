@@ -56,12 +56,15 @@ const CourseContent = () => {
     <div className="max-w-[1600px] mx-auto p-6 animate-in fade-in duration-500 ">
       
       <div className="flex flex-col lg:flex-row gap-10 ">
-        {/* Columna Izquierda: Bloques de Clases */}
+        {/* Columna Izquierda: Temario */}
         <div className="lg:w-2/3 ">
           <div className="flex flex-col md:flex-row md:items-center justify-between mb-10 gap-4">
-            <h1 className="text-4xl font-extrabold text-white border-l-8 border-blue-600 pl-4">
-              {data.course}
-            </h1>
+            <div>
+              <h1 className="text-4xl font-extrabold text-white border-l-8 border-blue-600 pl-4">
+                {data.course}
+              </h1>
+              <p className="text-gray-400 mt-3">Temario del curso</p>
+            </div>
             
             <button 
               onClick={() => navigate(-1)}
@@ -81,20 +84,20 @@ const CourseContent = () => {
           </div>
 
           <div className="grid md:grid-cols-1 xl:grid-cols-2 gap-8 h-[70vh] overflow-y-scroll scrollbar-hide pr-2">
-            {data.classes.map((cls) => (
+            {data.temario.map((tema) => (
               <div
-                key={cls.id}
+                key={tema.id}
                 className="backdrop-blur-md bg-white/5 border border-white/10 shadow-2xl rounded-2xl p-6 border-t-4 border-t-blue-500 transform hover:-translate-y-2 transition-all duration-300 flex flex-col"
               >
                 <div className="text-blue-400 font-bold text-xs mb-2 uppercase tracking-widest">
-                  Sesión {cls.id}
+                  Clase {tema.id}
                 </div>
                 <h2 className="text-xl font-bold text-white mb-4">
-                  {cls.title}
+                  {tema.title}
                 </h2>
 
                 <ul className="space-y-3 flex-grow">
-                  {cls.topics.map((topic, index) => (
+                  {tema.topics.map((topic, index) => (
                     <li
                       key={index}
                       className="text-gray-300 flex items-start gap-2 text-sm border-b border-white/5 pb-2 last:border-0"

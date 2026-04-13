@@ -32,7 +32,7 @@ export const cursos = [
     "seccion": "Frontend",
     "type": "Subscription",
     "identifier": "Frontend_intro",
-    "fechaInicio": "18/01/2026",
+    "fechaInicio": "25/04/2026",
     "finish": false
   },
   {
