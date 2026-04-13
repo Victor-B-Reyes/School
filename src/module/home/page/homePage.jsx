@@ -1,6 +1,7 @@
 import { useLocation, Outlet } from "react-router-dom";
 import CardComponet from "../../component/cardComponent";
 import { cursos } from "../../api/data";
+import { colaboradores } from "../../api/colaboradores";
 import Footer from "../../layout/fooder";
 import Header from "../../layout/header";
 import Navbar from "../../layout/navbar";
@@ -143,10 +144,39 @@ function HomePage(){
                             </div>
                         </div>
                     </div>
+                    <section className="w-full mx-auto py-12">
+                        <div className="rounded-2xl shadow-xl py-8 overflow-hidden">
+                            <h2 className="text-3xl font-bold text-center text-gray-900 mb-8">
+                                Colaboradores del proyecto
+                            </h2>
+
+                            <div className="flex flex-wrap justify-center gap-6">
+                                {colaboradores.map((colaborador) => (
+                                    <a
+                                        key={colaborador.id}
+                                        href={colaborador.url}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="group block"
+                                    >
+                                        <div className=" h-30 sm:h-32 rounded-2xl overflow-hidden border border-gray-200 bg-gray-100 shadow-md">
+                                            <img
+                                                src={colaborador.imageUrl}
+                                                alt={colaborador.name}
+                                                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                                            />
+                                        </div>
+                                    </a>
+                                ))}
+                            </div>
+                        </div>
+                    </section>
                 </div>
                 
             </main>
         </div>
+
+        <div></div>
         <Footer/>
     </div>
     )
