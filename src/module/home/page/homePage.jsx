@@ -134,8 +134,20 @@ function HomePage(){
                                         </h2>
                                         <div className="space-y-4">
                                             <div>
+                                                <h3 className="font-semibold text-gray-800">Dipl. en Informática</h3>
+                                                <p className="text-sm text-gray-500">Instituto INTEC Hispanoamericano (2024-2025)</p>
+                                            </div>
+                                            <div>
+                                                <h3 className="font-semibold text-gray-800">Tec. en Mantenimiento Industrial</h3>
+                                                <p className="text-sm text-gray-500">CECyTEV No.25 (2016-2019)</p>
+                                            </div>
+                                            <div>
                                                 <h3 className="font-semibold text-gray-800">Ing. Sistemas Computacionales</h3>
                                                 <p className="text-sm text-gray-500">Instituto Tecnológico de Tuxtepec (2019-2025)</p>
+                                            </div>
+                                            <div>
+                                                <h3 className="font-semibold text-gray-800">Dipl. en electrónica y programación con arduino.</h3>
+                                                <p className="text-sm text-gray-500">Corporativo CACC (2026-ACTUALMENTE)</p>
                                             </div>
                                             
                                         </div>

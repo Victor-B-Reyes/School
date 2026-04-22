@@ -38,7 +38,7 @@ export const cursos = [
   {
     "id": 4,
     "cap": "IA001",
-    "title": "Curso IA Nivel Basico",
+    "title": "Curso IA Nivel Básico",
     "description": "Aprende los fundamentos de la inteligencia artificial.",
     "imageUrl": "Curso_1.jpeg",
     "seccion": "IA",
@@ -49,5 +49,4 @@ export const cursos = [
   },
   
 ];
-
 

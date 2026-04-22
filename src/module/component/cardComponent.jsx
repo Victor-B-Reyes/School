@@ -34,7 +34,7 @@ function CardComponet({ title, description, imageUrl, seccion, type, identifier,
                 ) : (
                     <div className="px-6 pt-4 pb-4 mt-auto">
                         <button disabled className="w-full bg-gray-400 cursor-not-allowed text-white font-bold py-2 px-4 rounded-lg">
-                            Próximamente..
+                            Próximamente...
                         </button>
                     </div>
                         )
