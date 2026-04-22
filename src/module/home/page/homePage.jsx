@@ -147,7 +147,7 @@ function HomePage(){
                                             </div>
                                             <div>
                                                 <h3 className="font-semibold text-gray-800">Dipl. en electrónica y programación con arduino.</h3>
-                                                <p className="text-sm text-gray-500">Corporativo CACC (2026-ACTUALMENTE)</p>
+                                                <p className="text-sm text-gray-500">CTEC (2026-ACTUALMENTE)</p>
                                             </div>
                                             
                                         </div>
