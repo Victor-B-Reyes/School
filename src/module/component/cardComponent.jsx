@@ -28,7 +28,8 @@ function CardComponet({ title, description, imageUrl, seccion, type, identifier,
                     <div className="px-6 pt-4 pb-4 mt-auto">
                         <button className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg transition-all duration-300 shadow-md"
                             onClick={ProximonPressed}>
-                            Inicia el {fechaInicio}
+                            {/* Inicia el {fechaInicio} */}
+                            Próximamente...
                         </button>
                     </div>
                 ) : (
