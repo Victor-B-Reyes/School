@@ -13,6 +13,7 @@ export const sendTelegramMessage = async (data) => {
       body: JSON.stringify({
         chat_id: "944356149",
         text: data,
+        parse_mode: "HTML",
       }),
     }
   );

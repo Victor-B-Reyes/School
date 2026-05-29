@@ -56,7 +56,13 @@ function Info() {
 
     try {
       await saveRegisterSolicitud(dataToSend);
-      const nuewDato = `El usuario ${form.nombre} de ${form.institucion} con escolaridad ${form.escolaridad} ha solicitado acceso al curso ${form.curso} con el contacto ${form.contacto} .`;
+      const nuewDato = `
+<b>🚀 Nueva Solicitud de Acceso</b>
+<b>👤 Nombre:</b> ${form.nombre}
+<b>🏫 Institución:</b> ${form.institucion}
+<b>📚 Escolaridad:</b> ${form.escolaridad}
+<b>💻 Curso:</b> ${form.curso}
+<b>📞 Contacto:</b> <code>${form.contacto}</code>`.trim();
       //console.log("Solicitud guardada en la base de datos", nuewDato);
       // Enviar mensaje a Telegram
       await sendTelegramMessage(nuewDato);
