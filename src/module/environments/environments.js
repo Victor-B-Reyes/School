@@ -38,7 +38,7 @@ export const urlWarehouse = axios.create({
 
 
 export const urlAdministration = axios.create({
-  baseURL: `${url}/tracking/api`,
+  baseURL: `${url}/administration/api`,
   //baseURL: " http://localhost:5047/api",
   headers: {
     "Content-Type": "application/json",
