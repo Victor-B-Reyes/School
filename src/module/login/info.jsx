@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { cursos } from "../api/data";
 import { saveRegisterSolicitud } from "../api/registerSolicitud";
+import { sendTelegramMessage } from "../api/telegram";
 import Header from "../layout/header";
 import Footer from "../layout/fooder";
 function Info() {
@@ -55,6 +56,11 @@ function Info() {
 
     try {
       await saveRegisterSolicitud(dataToSend);
+      const nuewDato = `El usuario ${form.nombre} de ${form.institucion} con escolaridad ${form.escolaridad} ha solicitado acceso al curso ${form.curso} con el contacto ${form.contacto}.`;
+      console.log("Solicitud guardada en la base de datos", nuewDato);
+      // Enviar mensaje a Telegram
+      await sendTelegramMessage(nuewDato);
+
       setSuccess("Solicitud enviada 🚀");
       setForm({
         curso: "",

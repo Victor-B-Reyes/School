@@ -68,3 +68,5 @@ export const firebase = {
     authDomain: 'beapp-501d1.firebaseapp.com',
     messagingSenderId: '151993360357',
 }
+
+export const TELEGRAM_TOKEN = import.meta.env.VITE_TELEGRAM_TOKEN;
