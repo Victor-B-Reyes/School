@@ -8,7 +8,7 @@ export const getRegisterSolicitud = async () => {
 };
 
 export const saveRegisterSolicitud = async (data) => {
-  console.log(data)
+  //console.log(data)
   const response = await urlAdministration.post("/CourserInfo", data, {
       headers: {
         'accept': 'text/plain',
