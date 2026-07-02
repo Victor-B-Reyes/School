@@ -55,7 +55,7 @@ function Info() {
     };
 
     try {
-      await saveRegisterSolicitud(dataToSend);
+      //await saveRegisterSolicitud(dataToSend);
       const nuewDato = `
 <b>🚀 Nueva Solicitud de Acceso</b>
 <b>👤 Nombre:</b> ${form.nombre}

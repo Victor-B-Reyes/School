@@ -15,7 +15,7 @@ function FundamentosPage(){
         <div>
             <Header />
             <main className="w-full bg-gray-50 pb-2">
-            <h1 className="text-4xl font-bold text-center py-2 text-white" id="Cursos">Cursos</h1>
+            <h1 className="text-4xl font-bold text-center py-2 text-white" id="Cursos">Recursos</h1>
             <Navbar />
              
             <div className="container mx-auto px-4">

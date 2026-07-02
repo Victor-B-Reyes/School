@@ -24,7 +24,7 @@ function HomePage(){
                         </p>
                     </div>
                 </div>
-                <h1 className="text-4xl font-bold text-center py-4 text-white" id="Cursos">Cursos</h1>
+                <h1 className="text-4xl font-bold text-center py-4 text-white" id="Cursos">Recursos</h1>
                 <Navbar />
                 <div className="container mx-auto px-4 pb-6">
                 {location.pathname === '/' ? 

@@ -23,7 +23,7 @@ export const cursos = [
     "fechaInicio": "",
     "finish": false
   },
-  {
+  /*{
     "id": 3,
     "cap": "Frontend001",
     "title": "Desarrollo Frontend",
@@ -34,7 +34,7 @@ export const cursos = [
     "identifier": "Frontend_intro",
     "fechaInicio": "25/04/2026",
     "finish": false
-  },
+  },*/
   {
     "id": 4,
     "cap": "IA001",

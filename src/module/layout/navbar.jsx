@@ -29,11 +29,6 @@ function Navbar(){
                         IA
                     </button>
                 </li>
-                <li>
-                    <button className={getButtonClass('/Frontend')} onClick={() => navigate('/Frontend')}>
-                        Frontend
-                    </button>
-                </li>
             </ul>
         </nav>
     )
