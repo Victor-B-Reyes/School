@@ -49,7 +49,7 @@ function Login() {
 
         <div className="relative text-white text-center px-10">
           <h1 className="text-5xl font-bold mb-4 tracking-wide">
-            MWDEVPlatform
+            MWDEV Platform
           </h1>
           <p className="text-lg text-gray-300">
             Aprende. Construye. Evoluciona 🚀

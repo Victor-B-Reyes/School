@@ -32,7 +32,7 @@ function Info() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    if (!form.curso || !form.nombre || !form.escolaridad || !form.contacto || !form.institucion) {
+    if ( !form.nombre || !form.escolaridad || !form.contacto || !form.institucion) {
       setError("Completa todos los campos");
       setSuccess("");
       return;
@@ -61,7 +61,6 @@ function Info() {
 <b>👤 Nombre:</b> ${form.nombre}
 <b>🏫 Institución:</b> ${form.institucion}
 <b>📚 Escolaridad:</b> ${form.escolaridad}
-<b>💻 Curso:</b> ${form.curso}
 <b>📞 Contacto:</b> <code>${form.contacto}</code>`.trim();
       //console.log("Solicitud guardada en la base de datos", nuewDato);
       // Enviar mensaje a Telegram
@@ -69,7 +68,6 @@ function Info() {
 
       setSuccess("Solicitud enviada 🚀");
       setForm({
-        curso: "",
         nombre: "",
         escolaridad: "",
         institucion: "",
@@ -117,28 +115,6 @@ function Info() {
             {success}
           </p>
         )}
-
-        {/* Curso */}
-        <select
-          name="curso"
-          value={form.curso}
-          onChange={handleChange}
-          className="w-full p-3 mb-4 rounded-xl bg-white/10 text-white border border-white/20 focus:outline-none focus:ring-2 focus:ring-blue-400"
-        >
-          <option value="" className="text-black">
-            Selecciona un curso
-          </option>
-              
-          {cursos.map((curso) => (
-            <option
-              key={curso.id}
-              value={curso.identifier}
-              className="text-black"
-            >
-              {curso.title}
-            </option>
-          ))}
-        </select>
 
         {/* Nombre */}
         <input

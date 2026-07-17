@@ -23,23 +23,26 @@ function Header (){
 
       {/* Botón a la derecha */}
       <div>
+        {/*
         <button 
           className="bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-lg transition-all duration-300" 
           onClick={SubscriptionPressed}
         >
           Iniciar Sesión
         </button>
-        <button 
-          className="bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-4 ml-3 rounded-lg transition-all duration-300" 
-          onClick={CursosPressed}
-        >
-          Cursos
-        </button>
+        */}
+        
         <button 
           className="bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-4 ml-3 rounded-lg transition-all duration-300" 
           onClick={HomePressed}
         >
           Home
+        </button>
+        <button 
+          className="bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-4 ml-3 rounded-lg transition-all duration-300" 
+          onClick={CursosPressed}
+        >
+          Cursos
         </button>
       </div>
 

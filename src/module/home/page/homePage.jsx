@@ -97,13 +97,13 @@ function HomePage(){
                                     <div className="space-y-6">
                                         <div className="relative pl-4 border-l-2 border-gray-200">
                                             <h3 className="font-bold text-gray-800"><a href="https://bi2.mx/" target="_blank" rel="noopener noreferrer">Business Inteligent</a></h3>
-                                            <p className="text-sm text-blue-600 mb-1">Marzo 2025 - Junio 20266</p>
+                                            <p className="text-sm text-blue-600 mb-1">Marzo 2025 - Junio 2026</p>
                                             <p className="text-sm text-gray-600">Desarrollador Full Stack</p>
                                         </div>
                                         <div className="relative pl-4 border-l-2 border-gray-200">
                                             <h3 className="font-bold text-gray-800"><a href="https://www.facebook.com/CosverIntec/?locale=es_LA" target="_blank" rel="noopener noreferrer">Instituto Intec Hispanoamericano</a></h3>
                                             <p className="text-sm text-blue-600 mb-1">Abril 2024 - Junio 2025</p>
-                                            <p className="text-sm text-gray-600">Profesor de tiempo completo (Mantenimiento, Diseño, Web)</p>
+                                            <p className="text-sm text-gray-600">Profesor Nivel Bachillerato (Introducción, Mantenimiento, Diseño gráfico, Desarrollo web)</p>
                                         </div>
                                         <div className="relative pl-4 border-l-2 border-gray-200">
                                             <h3 className="font-bold text-gray-800"><a href="https://www.facebook.com/ED.PUBLICIDAD.01?locale=es_LA" target="_blank" rel="noopener noreferrer">ED Publicidad</a></h3>
