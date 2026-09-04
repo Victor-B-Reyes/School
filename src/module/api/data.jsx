@@ -9,7 +9,8 @@ export const cursos = [
     "type": "Free",
     "identifier": "Arduino_intro",
     "fechaInicio": "",
-    "finish": true
+    "finish": true,
+    "public": true
   },
   {
     "id": 2,
@@ -21,7 +22,8 @@ export const cursos = [
     "type": "Free",
     "identifier": "Fundamentos_intro",
     "fechaInicio": "",
-    "finish": false
+    "finish": false,
+    "public": false
   },
   /*{
     "id": 3,
@@ -45,7 +47,21 @@ export const cursos = [
     "type": "Free",
     "identifier": "IA_basico",
     "fechaInicio": "",
-    "finish": true
+    "finish": true,
+    "public": true
+  },
+  {
+    "id": 5,
+    "cap": "Redes001",
+    "title": "Introducción a Redes",
+    "description": "Aprende los fundamentos de las redes.",
+    "imageUrl": "Curso_3.jpg",
+    "seccion": "Redes",
+    "type": "Free",
+    "identifier": "Redes_basico",
+    "fechaInicio": "",
+    "finish": true,
+    "public": false
   },
   
 ];

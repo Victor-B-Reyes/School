@@ -23,6 +23,9 @@ import FrontendPage from "../module/frontEnd/page/frontendPage";
 import Frontend001 from "../module/frontEnd/component/Frontend001/Frontend001Page";
 import CourseContent from "../module/component/courseContent";
 
+import RedesPage from "../module/redes/page/redesPage";
+import Redes001 from "../module/redes/component/Redes001/Redes001Page";
+
 function ScrollToTop() {
     const { pathname } = useLocation();
 
@@ -52,6 +55,9 @@ function Enrutamiento(){
             </Route>
             <Route path="/Frontend" element={<FrontendPage/>}>
                 <Route path="Frontend_intro" element={<Frontend001/>}/>
+            </Route>
+            <Route path="/Redes" element={<RedesPage/>}>
+                <Route path="Redes_intro" element={<Redes001/>}/>
             </Route>
             <Route path="/Login" element={<Login/>} />
             <Route path="/Cursos" element={<CursosComponent/>} />

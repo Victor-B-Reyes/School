@@ -29,7 +29,7 @@ function HomePage(){
                 <div className="container mx-auto px-4 pb-6">
                 {location.pathname === '/' ? 
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-8">
-                    {cursos.map((curso) => (
+                    {cursos.map((curso) => curso.public ?(
                         <CardComponet 
                             key={curso.id}
                             id={curso.id}
@@ -42,7 +42,7 @@ function HomePage(){
                             fechaInicio={curso.fechaInicio}
                             finish={curso.finish}
                         />
-                    ))}
+                    ): null)}
                 </div> 
                 : <Outlet />}
                 </div>
