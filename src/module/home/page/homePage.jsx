@@ -96,12 +96,12 @@ function HomePage(){
                                     </h2>
                                     <div className="space-y-6">
                                         <div className="relative pl-4 border-l-2 border-gray-200">
-                                            <h3 className="font-bold text-gray-800"><a href="https://www.facebook.com/share/1EMxjSrNdF/" target="_blank" rel="noopener noreferrer">Business Inteligent</a></h3>
+                                            <h3 className="font-bold text-gray-800"><a href="https://www.facebook.com/share/1EMxjSrNdF/" target="_blank" rel="noopener noreferrer">IECOM</a></h3>
                                             <p className="text-sm text-blue-600 mb-1">Septiembre 2026 - Actualmente</p>
                                             <p className="text-sm text-gray-600">Docente de informática</p>
                                         </div>
                                         <div className="relative pl-4 border-l-2 border-gray-200">
-                                            <h3 className="font-bold text-gray-800"><a href="https://www.facebook.com/share/1LsF3rYMSC/" target="_blank" rel="noopener noreferrer">Business Inteligent</a></h3>
+                                            <h3 className="font-bold text-gray-800"><a href="https://www.facebook.com/share/1LsF3rYMSC/" target="_blank" rel="noopener noreferrer">Instituto Tecnológico de Tuxtepec</a></h3>
                                             <p className="text-sm text-blue-600 mb-1">Agosto 2026 - Actualmente</p>
                                             <p className="text-sm text-gray-600">Profesor</p>
                                         </div>
