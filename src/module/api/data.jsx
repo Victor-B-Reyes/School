@@ -65,7 +65,7 @@ export const cursos = [
   },
   {
     "id": 6,
-    "cap": "0000",
+    "cap": "",
     "title": "Desarrollo de Sistemas IOT con ESP32",
     "description": "Desarrollar las competencias necesarias para diseñar e implementar sistemas IoT utilizando el microcontrolador ESP32, sensores y actuadores.",
     "imageUrl": "CursoIot.png",
