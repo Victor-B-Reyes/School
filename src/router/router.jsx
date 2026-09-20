@@ -62,6 +62,7 @@ function Enrutamiento(){
                 <Route path="Redes_intro" element={<Redes001/>}/>
             </Route>
             <Route path="/IoT" element={<IoTPage/>}>
+            <Route path="Redes_intro" element={<Redes001/>}/>
             </Route>
             <Route path="/Login" element={<Login/>} />
             <Route path="/Cursos" element={<CursosComponent/>} />
