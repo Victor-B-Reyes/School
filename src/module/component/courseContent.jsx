@@ -1,7 +1,6 @@
-import { useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
-import { content } from "../api/content";
-import LoginForm from "../login/loginForm";
+import { content } from "../api/contenidosCourses/contentDesarrolloIot";
+import FormularioInteres from "./formularioInteres";
 import Header from "../layout/header";
 import Footer from "../layout/fooder";
 const CourseContent = () => {
@@ -9,29 +8,6 @@ const CourseContent = () => {
   const navigate = useNavigate();
 
   // Lógica de Login para la barra lateral
-  const [form, setForm] = useState({ email: "", password: "" });
-  const [error, setError] = useState("");
-
-  const handleChange = (e) => {
-    setForm({ ...form, [e.target.name]: e.target.value });
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    if (!form.email || !form.password) {
-      setError("Completa todos los campos");
-      return;
-    }
-    if (form.email === "admin@edu.com" && form.password === "123456") {
-      setError("");
-      navigate("/Home");
-    } else {
-      setError("Credenciales incorrectas");
-    }
-  };
-
-  const solicitud = () => navigate("/Info");
-  const irInicio = () => navigate("/");
  
 
   const data = content.find((item) => item.id_course === parseInt(id));
@@ -118,17 +94,7 @@ const CourseContent = () => {
             {/* Overlay sutil para que el form resalte */}
             <div className="absolute inset-0 opacity-20 bg-gradient-to-b from-blue-600 to-transparent pointer-events-none"></div>
             
-            <div className="mb-6 text-center relative z-10">
-              <h2 className="text-2xl font-bold text-white">Acceso al Curso</h2>
-              <p className="text-gray-400 mt-2">Inicia sesión para desbloquear el material completo.</p>
-            </div>
-            <LoginForm 
-              form={form} 
-              handleChange={handleChange} 
-              handleSubmit={handleSubmit} 
-              error={error} 
-              isSidebar={true}
-            />
+            <FormularioInteres curso={data.course} />
           </div>
         </div>
       </div>

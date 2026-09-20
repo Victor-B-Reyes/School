@@ -26,6 +26,8 @@ import CourseContent from "../module/component/courseContent";
 import RedesPage from "../module/redes/page/redesPage";
 import Redes001 from "../module/redes/component/Redes001/Redes001Page";
 
+import IoTPage from "../module/Iot/page/IoTPage";
+
 function ScrollToTop() {
     const { pathname } = useLocation();
 
@@ -58,6 +60,8 @@ function Enrutamiento(){
             </Route>
             <Route path="/Redes" element={<RedesPage/>}>
                 <Route path="Redes_intro" element={<Redes001/>}/>
+            </Route>
+            <Route path="/IoT" element={<IoTPage/>}>
             </Route>
             <Route path="/Login" element={<Login/>} />
             <Route path="/Cursos" element={<CursosComponent/>} />

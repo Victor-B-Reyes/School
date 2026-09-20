@@ -182,11 +182,11 @@ function HomePage(){
                                         rel="noopener noreferrer"
                                         className="group block"
                                     >
-                                        <div className=" h-30 sm:h-32 rounded-2xl overflow-hidden border border-gray-200 bg-gray-100 shadow-md">
+                                        <div className="h-30 sm:h-32 flex items-center justify-center rounded-2xl overflow-hidden border border-gray-200 bg-gray-100 shadow-md">
                                             <img
                                                 src={colaborador.imageUrl}
                                                 alt={colaborador.name}
-                                                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                                                className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-300"
                                             />
                                         </div>
                                     </a>

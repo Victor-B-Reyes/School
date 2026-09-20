@@ -1,8 +1,14 @@
 export const colaboradores = [
   {
     id: 1,
-    name: "Colaborador 1",
-    imageUrl: "/LogoBi2.png",
-    url: "https://bi2.mx"
+    name: "INEI",
+    imageUrl: "/logoINEI.png",
+    url: "https://www.facebook.com/share/1CSPKVJqES/"
+  },
+  {
+    id: 2,
+    name: "IECOM",
+    imageUrl: "/logoIECOM.png",
+    url: "https://www.facebook.com/share/1EMxjSrNdF/"
   },
 ];

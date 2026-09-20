@@ -29,6 +29,11 @@ function Navbar(){
                         IA
                     </button>
                 </li>
+                <li>
+                    <button className={getButtonClass('/IoT')} onClick={() => navigate('/IoT')}>
+                        IoT
+                    </button>
+                </li>
                 {/*<li>
                     <button className={getButtonClass('/Redes')} onClick={() => navigate('/Redes')}>
                         Redes
