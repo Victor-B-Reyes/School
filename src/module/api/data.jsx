@@ -72,7 +72,7 @@ export const cursos = [
     "seccion": "IoT",
     "type": "Subscription",
     "identifier": "IoT_esp32",
-    "fechaInicio": "",
+    "fechaInicio": "10/10/2026",
     "finish": false,
     "public": true
   },
