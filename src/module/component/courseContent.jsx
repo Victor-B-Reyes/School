@@ -62,7 +62,7 @@ const CourseContent = () => {
             </div>
             <div className="flex items-center gap-2 bg-blue-600/20 border border-blue-500/30 text-blue-400 px-4 py-2 rounded-xl text-sm font-medium">
               <img src="/icon/dinero.png" alt="Dinero" className="h-5 w-5 object-contain" />
-              Costos por clase: <span className="text-white font-bold">$125 MX</span>
+              Costos semanal: <span className="text-white font-bold">$300 MX</span>
             </div>
           </div>
 
