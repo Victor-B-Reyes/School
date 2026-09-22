@@ -28,6 +28,7 @@ const FormularioInteres = ({ curso }) => {
 <b>📞 Contacto:</b> <code>${form.contacto}</code>`.trim());
             setSuccess("Solicitud enviada");
             setForm({ nombre: "", contacto: "", escolaridad: "", institucion: "" });
+            window.open("https://chat.whatsapp.com/CPZ3GPLKnrcKy6FkzalN30?s=cl&p=a&mlu=4&ilr=4", "_blank", "noopener,noreferrer");
         } catch (submitError) {
             console.error(submitError);
             setError("Ocurrio un error al enviar la solicitud.");
