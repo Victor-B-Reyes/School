@@ -40,6 +40,7 @@ const CourseContent = () => {
                 {data.course}
               </h1>
               <p className="text-gray-400 mt-3">Temario del curso</p>
+
             </div>
             
             <button 
@@ -52,10 +53,16 @@ const CourseContent = () => {
 
           <div className="flex items-center gap-3 mb-8">
             <div className="flex items-center gap-2 bg-blue-600/20 border border-blue-500/30 text-blue-400 px-4 py-2 rounded-xl text-sm font-medium">
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-              </svg>
-              Próximo inicio: <span className="text-white font-bold">10/10/2026</span>
+              <img src="/icon/agenda.png" alt="Agenda" className="h-5 w-5 object-contain" />
+              Próximo inicio: <span className="text-white font-bold">1/10/2026</span>
+            </div>
+            <div className="flex items-center gap-2 bg-blue-600/20 border border-blue-500/30 text-blue-400 px-4 py-2 rounded-xl text-sm font-medium">
+              <img src="/icon/reloj.png" alt="Reloj" className="h-5 w-5 object-contain" />
+              Horarios: <span className="text-white font-bold">Sabados y domingos: 18:00 - 20:00 Hr MX</span>
+            </div>
+            <div className="flex items-center gap-2 bg-blue-600/20 border border-blue-500/30 text-blue-400 px-4 py-2 rounded-xl text-sm font-medium">
+              <img src="/icon/dinero.png" alt="Dinero" className="h-5 w-5 object-contain" />
+              Costos por clase: <span className="text-white font-bold">$125</span>
             </div>
           </div>
 
