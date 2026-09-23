@@ -1,7 +1,7 @@
 export const content = [
   {
     id_course: 6,
-    course: "DESARROLLO DE SISTEMAS IOT CON ESP32",
+    course: "Diseño y desarrollo de soluciones IoT con ESP32",
     fechaInicio: "10/10/2026",
     temario: [
       {
