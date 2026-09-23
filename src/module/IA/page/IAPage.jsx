@@ -8,8 +8,10 @@ import Navbar from "../../layout/navbar";
 
 function IAPage(){
      const location = useLocation();
-     const [IACourses] = useState(()=>{
-        return cursos.filter(curso => curso.seccion === "IA");
+    const [IACourses] = useState(()=>{
+        return cursos.filter(curso => Array.isArray(curso.seccion)
+            ? curso.seccion.includes("IA")
+            : curso.seccion === "IA");
     });
     return(
         <div>

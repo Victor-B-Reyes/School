@@ -28,6 +28,9 @@ import Redes001 from "../module/redes/component/Redes001/Redes001Page";
 
 import IoTPage from "../module/Iot/page/IoTPage";
 
+import Esp32Page from "../module/Esp32/page/Esp32Page";
+import Esp32001 from "../module/Esp32/component/Introduccion001/Esp32001Page";
+
 function ScrollToTop() {
     const { pathname } = useLocation();
 
@@ -62,7 +65,10 @@ function Enrutamiento(){
                 <Route path="Redes_intro" element={<Redes001/>}/>
             </Route>
             <Route path="/IoT" element={<IoTPage/>}>
-            <Route path="Redes_intro" element={<Redes001/>}/>
+                <Route path="Redes_intro" element={<Redes001/>}/>
+            </Route>
+            <Route path="/Esp32" element={<Esp32Page/>}>
+                <Route path="Esp32_intro" element={<Esp32001/>}/>
             </Route>
             <Route path="/Login" element={<Login/>} />
             <Route path="/Cursos" element={<CursosComponent/>} />

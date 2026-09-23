@@ -9,7 +9,9 @@ import Navbar from "../../layout/navbar";
 function IoTPage(){
      const location = useLocation();
      const [redesCourses] = useState(()=>{
-        return cursos.filter(curso => curso.seccion === "IoT");
+        return cursos.filter(curso => Array.isArray(curso.seccion)
+            ? curso.seccion.includes("IoT")
+            : curso.seccion === "IoT");
     });
     return(
         <div>

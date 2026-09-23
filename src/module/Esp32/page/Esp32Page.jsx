@@ -6,24 +6,24 @@ import Footer from "../../layout/fooder";
 import Header from "../../layout/header";
 import Navbar from "../../layout/navbar";
 
-function ArduinoPage(){
+function Esp32Page(){
      const location = useLocation();
-    const [arduinoCourses] = useState(()=>{
+     const [esp32Courses] = useState(()=>{
         return cursos.filter(curso => Array.isArray(curso.seccion)
-            ? curso.seccion.includes("Arduino")
-            : curso.seccion === "Arduino");
+            ? curso.seccion.includes("Esp32")
+            : curso.seccion === "Esp32");
     });
     return(
         <div>
             <Header />
             <main className="w-full bg-gray-50 pb-2">
-            <h1 className="text-4xl font-bold text-center py-2 text-white" id="Cursos">Recursos</h1>
+            <h1 className="text-4xl font-bold text-center py-2 text-white" id="Cursos">Cursos</h1>
             <Navbar />
              
             <div className="container mx-auto px-4">
-                {location.pathname === '/Arduino' ?
+                {location.pathname === '/Esp32' ?
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-8">
-                    {arduinoCourses.map((curso) => (
+                    {esp32Courses.map((curso) => (
                         <CardComponet 
                             key={curso.id}
                             id={curso.id}
@@ -32,9 +32,9 @@ function ArduinoPage(){
                             imageUrl={curso.imageUrl}
                             seccion={curso.seccion}
                             type={curso.type}
+                            finish={curso.finish}
                             fechaInicio={curso.fechaInicio}
                             identifier={curso.identifier}
-                            finish={curso.finish}
                         />
                     ))}
                 </div> : <Outlet />}
@@ -45,4 +45,4 @@ function ArduinoPage(){
     )
 }
 
-export default ArduinoPage;
+export default Esp32Page;

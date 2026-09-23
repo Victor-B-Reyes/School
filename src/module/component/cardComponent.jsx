@@ -3,10 +3,11 @@ import CourseContent from "./courseContent";
 function CardComponet({ title, description, imageUrl, seccion, type, identifier, finish, fechaInicio, id }) {
     const navigate = useNavigate()
     const location = useLocation()
+    const courseIdentifier = Array.isArray(identifier) ? identifier[0] : identifier;
     console.log(type);
     const cartPressed = () => {
-        console.log(`Card "${identifier}" pressed.`);
-        navigate(`/${seccion}/${identifier}`);
+        console.log(`Card "${courseIdentifier}" pressed.`);
+        navigate(`/${seccion}/${courseIdentifier}`);
     }
     const SubscriptionPressed = () => {
         navigate(`/login`);

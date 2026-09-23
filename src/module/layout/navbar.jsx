@@ -25,6 +25,11 @@ function Navbar(){
                     </button>
                 </li>
                 <li>
+                    <button className={getButtonClass('/Esp32')} onClick={() => navigate('/Esp32')}>
+                        Esp32
+                    </button>
+                </li>
+                <li>
                     <button className={getButtonClass('/IA')} onClick={() => navigate('/IA')}>
                         IA
                     </button>
@@ -34,6 +39,7 @@ function Navbar(){
                         IoT
                     </button>
                 </li>
+                
                 {/*<li>
                     <button className={getButtonClass('/Redes')} onClick={() => navigate('/Redes')}>
                         Redes
