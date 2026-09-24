@@ -106,6 +106,22 @@ const CourseContent = () => {
         </div>
       </div>
     </div>
+    {/*<section aria-labelledby="certificacion-heading" className="px-4 py-10 sm:px-6 lg:py-16">
+      <div className="mx-auto grid max-w-6xl overflow-hidden rounded-3xl border border-white/10 bg-gray-900/80 shadow-2xl md:grid-cols-2">
+        <div className="flex flex-col justify-center p-6 sm:p-10 lg:p-14">
+          <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-blue-400">Reconocimiento oficial</p>
+          <h2 id="certificacion-heading" className="mb-5 text-3xl font-extrabold text-white sm:text-4xl">
+            Certificación
+          </h2>
+          <p className="leading-relaxed text-gray-300">
+            Al culminar satisfactoriamente el curso, recibirás un certificado a nombre del Instituto Nacional de Electrónica e Ingeniería S.A.C. (INEI S.A.C.), firmado por un ingeniero colegiado, que acredita la formación y los conocimientos adquiridos en Diseño y Desarrollo de Sistemas IoT con ESP32.
+          </p>
+        </div>
+        <div className="flex items-center justify-center bg-black/20 p-5 sm:p-8">
+          <img src="/certificado.png" alt="Ejemplo del certificado del curso" className="h-auto max-h-[28rem] w-full rounded-xl border border-white/10 object-contain shadow-lg" />
+        </div>
+      </div>
+    </section>*/}
     <Footer/>
     </div>
   );
