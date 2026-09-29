@@ -8,8 +8,10 @@ import Navbar from "../../layout/navbar";
 
 function DebianPage(){
      const location = useLocation();
-     const [debianCourses] = useState(()=>{
-        return cursos.filter(curso => curso.seccion === "Debian");
+    const [debianCourses] = useState(()=>{
+        return cursos.filter(curso => Array.isArray(curso.seccion)
+            ? curso.seccion.includes("Debian")
+            : curso.seccion === "Debian");
     });
     return(
         <div>
@@ -28,6 +30,7 @@ function DebianPage(){
                             seccion={curso.seccion}
                             type={curso.type}
                             identifier={curso.identifier}
+                            finish={curso.finish}
                         />
                     ))}
                 </div> : <Outlet />}

@@ -40,11 +40,11 @@ function Navbar(){
                     </button>
                 </li>
                 
-                {/*<li>
-                    <button className={getButtonClass('/Redes')} onClick={() => navigate('/Redes')}>
-                        Redes
+                <li>
+                    <button className={getButtonClass('/Debian')} onClick={() => navigate('/Debian')}>
+                        Debian
                     </button>
-                </li>} */}
+                </li>
             </ul>
         </nav>
     )

@@ -89,6 +89,32 @@ export const cursos = [
     "finish": true,
     "public": true
   },*/
+  {
+    "id": 8,
+    "cap": "Debian001",
+    "title": "Mi primera máquina virtual con Debian",
+    "description": "Crea tu primera máquina virtual con la distribución Linux Debian, y configura tu entorno de desarrollo en modo servidor.",
+    "imageUrl": "Debian001.png",
+    "seccion":[ "Debian",],
+    "type": "Free",
+    "identifier": "Debian_intro",
+    "fechaInicio": "",
+    "finish": false,
+    "public": true
+  },
+  /*{
+    "id": 9,
+    "cap": "IA001",
+    "title": "Automatización de procesos con Inteligencia Artificial",
+    "description": "Aprende los fundamentos de la inteligencia artificial.",
+    "imageUrl": "Curso_1.jpeg",
+    "seccion":[ "IA",],
+    "type": "Subscription",
+    "identifier": "IA_basico",
+    "fechaInicio": "",
+    "finish": true,
+    "public": true
+  },*/
   
 ];
 
