@@ -12,6 +12,7 @@ import ArduinoPage from "../module/arduino/page/arduinoPage";
 import Arduino001 from "../module/arduino/component/Arduino001/Arduino001Page";
 
 import DebianPage from "../module/debian/page/debianPage";
+import Debian001 from "../module/debian/Debian001/Debian001Page";
 
 import FundamentosPage from "../module/fundamentos/page/fundamentosPage";
 import Fundamentos001 from "../module/fundamentos/component/Fundamentos001/Fundamentos001Page";
@@ -54,6 +55,7 @@ function Enrutamiento(){
                 <Route path="Fundamentos_intro" element={<Fundamentos001/>}/>
             </Route>
             <Route path="/Debian" element={<DebianPage/>}>
+                <Route path="Debian_virtual" element={<Debian001/>}/>
             </Route>
             <Route path="/IA" element={<IAPage/>}>
                 <Route path="IA_basico" element={<IA001/>}/>

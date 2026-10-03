@@ -97,7 +97,7 @@ export const cursos = [
     "imageUrl": "Debian001.png",
     "seccion":[ "Debian",],
     "type": "Free",
-    "identifier": "Debian_intro",
+    "identifier": "Debian_virtual",
     "fechaInicio": "",
     "finish": false,
     "public": true

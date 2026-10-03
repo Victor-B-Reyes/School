@@ -17,6 +17,7 @@ function DebianPage(){
         <div>
             <Header />
             <main className="w-full bg-gray-50">
+            <h1 className="text-4xl font-bold text-center py-2 text-white" id="Cursos">Recursos</h1>
             <Navbar />
             <div className="container mx-auto px-4">
                 {location.pathname === '/Debian' ?

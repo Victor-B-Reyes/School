@@ -1,6 +1,8 @@
 import { useLocation, Outlet } from "react-router-dom";
+import { useEffect, useState } from "react";
 import CardComponet from "../../component/cardComponent";
 import { cursos } from "../../api/data";
+import { Alumnos } from "../../api/alumnos";
 import { colaboradores } from "../../api/colaboradores";
 import Footer from "../../layout/fooder";
 import Header from "../../layout/header";
@@ -9,6 +11,20 @@ import Navbar from "../../layout/navbar";
 
 function HomePage(){
     const location = useLocation();
+    const [alumnoActual, setAlumnoActual] = useState(0);
+    const alumnosConComentario = Alumnos.filter((alumno) => alumno.Coment?.trim());
+
+    useEffect(() => {
+        if (alumnosConComentario.length < 2) return;
+        const intervalo = window.setInterval(() => {
+            setAlumnoActual((actual) => (actual + 1) % alumnosConComentario.length);
+        }, 7000);
+        return () => window.clearInterval(intervalo);
+    }, [alumnosConComentario.length]);
+
+    const cambiarAlumno = (direccion) => {
+        setAlumnoActual((actual) => (actual + direccion + alumnosConComentario.length) % alumnosConComentario.length);
+    };
     return(
     <div>
         <Header />
@@ -227,6 +243,58 @@ function HomePage(){
                         </div>
                     </section>
                 </div>
+                {alumnosConComentario.length > 0 && (
+                    <section className="relative overflow-hidden bg-gradient-to-br from-slate-950 via-blue-950 to-indigo-900 py-16 px-4 sm:px-6" aria-labelledby="comentarios-heading">
+                        <div className="absolute -top-24 -right-20 h-72 w-72 rounded-full bg-cyan-400/10 blur-3xl" aria-hidden="true" />
+                        <div className="absolute -bottom-24 -left-20 h-72 w-72 rounded-full bg-indigo-400/20 blur-3xl" aria-hidden="true" />
+                        <div className="relative mx-auto max-w-6xl">
+                            <div className="mb-10 text-center">
+                                <p className="mb-2 text-sm font-semibold uppercase tracking-[0.25em] text-cyan-300">Experiencias reales</p>
+                                <h2 id="comentarios-heading" className="text-3xl font-bold text-white sm:text-4xl">Lo que dicen nuestros alumnos</h2>
+                                <p className="mx-auto mt-3 max-w-2xl text-blue-100/80">Cada aprendizaje abre nuevas oportunidades. Conoce la experiencia de quienes ya están poniendo en práctica sus conocimientos.</p>
+                            </div>
+                            <div className="relative mx-auto max-w-4xl rounded-3xl border border-white/15 bg-white/10 p-6 shadow-2xl shadow-black/20 backdrop-blur-md sm:p-10">
+                                {alumnosConComentario.map((alumno, index) => (
+                                    <article key={alumno.id} aria-hidden={index !== alumnoActual} className={`${index === alumnoActual ? "grid" : "hidden"} items-center gap-8 md:grid-cols-[220px_1fr]`}>
+                                        <div className="mx-auto w-full max-w-[220px] text-center">
+                                            <div className="mx-auto mb-4 h-36 w-36 overflow-hidden rounded-full border-4 border-cyan-300/80 bg-slate-800 shadow-lg shadow-cyan-950/40 sm:h-44 sm:w-44">
+                                                <img src={`/${alumno.imageUrl.replace(/^\//, "")}`} alt={`Foto de ${alumno.name}`} className="h-full w-full object-cover" />
+                                            </div>
+                                            <h3 className="text-xl font-bold text-white">{alumno.name}</h3>
+                                            <p className="mt-1 text-sm font-medium text-cyan-200">{alumno.course}</p>
+                                        </div>
+                                        <div className="relative">
+                                            <span className="absolute -top-8 left-0 font-serif text-6xl leading-none text-cyan-300/70" aria-hidden="true">“</span>
+                                            <blockquote className="pt-4 text-center text-lg leading-relaxed text-blue-50 sm:text-left sm:text-xl">{alumno.Coment}</blockquote>
+                                            {alumno.redSocial && (
+                                                <a href={alumno.redSocial} target="_blank" rel="noopener noreferrer" className="mt-6 inline-flex rounded-full border border-cyan-200/40 px-4 py-2 text-sm font-semibold text-cyan-200 transition hover:bg-cyan-200/10 hover:text-white focus:outline-none focus:ring-2 focus:ring-cyan-300">
+                                                    Ver perfil de {alumno.name}
+                                                </a>
+                                            )}
+                                        </div>
+                                    </article>
+                                ))}
+                                {alumnosConComentario.length > 1 && (
+                                    <>
+                                        <button type="button" onClick={() => cambiarAlumno(-1)} aria-label="Comentario anterior" className="absolute left-2 top-1/2 -translate-y-1/2 rounded-full bg-white/10 p-3 text-white transition hover:bg-white/20 focus:outline-none focus:ring-2 focus:ring-cyan-300 sm:-left-6">
+                                            <span aria-hidden="true">‹</span>
+                                        </button>
+                                        <button type="button" onClick={() => cambiarAlumno(1)} aria-label="Siguiente comentario" className="absolute right-2 top-1/2 -translate-y-1/2 rounded-full bg-white/10 p-3 text-white transition hover:bg-white/20 focus:outline-none focus:ring-2 focus:ring-cyan-300 sm:-right-6">
+                                            <span aria-hidden="true">›</span>
+                                        </button>
+                                    </>
+                                )}
+                            </div>
+                            {alumnosConComentario.length > 1 && (
+                                <div className="mt-6 flex justify-center gap-2" aria-label="Elegir comentario">
+                                    {alumnosConComentario.map((alumno, index) => (
+                                        <button key={alumno.id} type="button" onClick={() => setAlumnoActual(index)} aria-label={`Ver comentario de ${alumno.name}`} aria-current={index === alumnoActual ? "true" : undefined} className={`h-2.5 rounded-full transition-all ${index === alumnoActual ? "w-8 bg-cyan-300" : "w-2.5 bg-white/40 hover:bg-white/70"}`} />
+                                    ))}
+                                </div>
+                            )}
+                        </div>
+                    </section>
+                )}
                 
             </main>
         </div>
