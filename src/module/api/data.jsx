@@ -99,7 +99,7 @@ export const cursos = [
     "type": "Free",
     "identifier": "Debian_virtual",
     "fechaInicio": "",
-    "finish": false,
+    "finish": true,
     "public": true
   },
   /*{
