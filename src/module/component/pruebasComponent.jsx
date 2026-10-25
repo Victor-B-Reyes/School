@@ -23,6 +23,9 @@ function PruebasComponent() {
           />
         </div>
 
+        <img >
+        </img>
+
         <p className="mt-4 text-center text-sm text-slate-500">
           Página de pruebas
         </p>
