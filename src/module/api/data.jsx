@@ -76,19 +76,6 @@ export const cursos = [
     "finish": false,
     "public": true
   },
-  /*{
-    "id": 7,
-    "cap": "Esp32001",
-    "title": "Introducción a ESP32",
-    "description": "Aprende la estructura y configuracion del microcontrolador ESP32.",
-    "imageUrl": "Esp32.jpg",
-    "seccion":[ "Esp32",],
-    "type": "Free",
-    "identifier": "Esp32_intro",
-    "fechaInicio": "",
-    "finish": true,
-    "public": true
-  },*/
   {
     "id": 8,
     "cap": "Debian001",
@@ -105,12 +92,12 @@ export const cursos = [
   /*{
     "id": 9,
     "cap": "IA001",
-    "title": "Automatización de procesos con Inteligencia Artificial",
-    "description": "Aprende los fundamentos de la inteligencia artificial.",
-    "imageUrl": "Curso_1.jpeg",
-    "seccion":[ "IA",],
+    "title": "Que es node-red",
+    "description": "",
+    "imageUrl": "",
+    "seccion":[ "NODE-RED",],
     "type": "Subscription",
-    "identifier": "IA_basico",
+    "identifier": "NODE-RED_basico",
     "fechaInicio": "",
     "finish": true,
     "public": true

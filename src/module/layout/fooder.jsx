@@ -1,4 +1,4 @@
-import { Phone, Mail, Youtube } from "lucide-react";
+import { MessageCircle, Mail, Youtube, Instagram, Facebook } from "lucide-react";
 function Footer (){
     return(
     <footer className="bg-gray-900 text-white pt-10 pb-5">
@@ -6,18 +6,23 @@ function Footer (){
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             {/* Contact Info */}
             <div>
-              <div className="space-y-4">
-                <a href="https://wa.me/529213068558" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-lg hover:text-indigo-400 transition-colors">
-                  <Phone />
-                  <span>+52 921 306 8558</span>
+              <h2 className="mb-2 text-xl font-semibold">Conecta conmigo</h2>
+              <p className="mb-5 text-sm text-gray-300">Contáctame o sígueme en mis redes sociales.</p>
+              <div className="flex items-center gap-5">
+                <a href="https://wa.me/529213068558" target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp" title="WhatsApp" className="hover:text-indigo-400 transition-colors">
+                  <MessageCircle size={24} />
                 </a>
-                <a href="mailto:victor_blanco_reyes@outlook.com" className="flex items-center gap-3 text-lg hover:text-indigo-400 transition-colors">
-                  <Mail />
-                  <span>victor_blanco_reyes@outlook.com</span>
+                <a href="mailto:victor_blanco_reyes@outlook.com" aria-label="Enviar correo" title="Correo" className="hover:text-indigo-400 transition-colors">
+                  <Mail size={24} />
                 </a>
-                <a href="https://www.youtube.com/@Mr_White_Dev" target="_blank" className="flex items-center gap-3 text-lg hover:text-indigo-400 transition-colors">
-                  <Youtube />
-                  <span>@Mr_White_Dev</span>
+                <a href="https://www.youtube.com/@Mr_White_Dev" target="_blank" rel="noopener noreferrer" aria-label="YouTube" title="YouTube" className="hover:text-indigo-400 transition-colors">
+                  <Youtube size={24} />
+                </a>
+                <a href="https://www.instagram.com/mwdev.es" target="_blank" rel="noopener noreferrer" aria-label="Instagram" title="Instagram" className="hover:text-indigo-400 transition-colors">
+                  <Instagram size={24} />
+                </a>
+                <a href="https://www.facebook.com/share/1F6ahQ6S5y/" target="_blank" rel="noopener noreferrer" aria-label="Facebook" title="Facebook" className="hover:text-indigo-400 transition-colors">
+                  <Facebook size={24} />
                 </a>
               </div>
             </div>

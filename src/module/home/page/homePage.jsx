@@ -7,6 +7,7 @@ import { colaboradores } from "../../api/colaboradores";
 import Footer from "../../layout/fooder";
 import Header from "../../layout/header";
 import Navbar from "../../layout/navbar";
+import { Mail, MessageCircle, Youtube, Instagram, Facebook } from "lucide-react";
 
 
 function HomePage(){
@@ -77,15 +78,21 @@ function HomePage(){
                                     </div>
                                     <h1 className="text-3xl font-bold mb-2">Victor Blanco Reyes</h1>
                                     <p className="text-blue-400 font-medium mb-4">Desarrollador Full Stack</p>
-                                    <div className="space-y-2 text-sm text-gray-300">
-                                        <a href="mailto:victor_blanco_reyes@outlook.com" className="block hover:text-white transition-colors">
-                                            victor_blanco_reyes@outlook.com
+                                    <div className="flex items-center justify-center gap-4 text-gray-300">
+                                        <a href="mailto:victor_blanco_reyes@outlook.com" aria-label="Enviar correo" title="Correo" className="hover:text-white transition-colors">
+                                            <Mail size={22} />
                                         </a>
-                                        <a href="https://wa.me/message/SASRL3RSQKZQA1" target="_blank" rel="noopener noreferrer" className="block hover:text-white transition-colors">
-                                            +52 921 306 8558
+                                        <a href="https://wa.me/message/SASRL3RSQKZQA1" target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp" title="WhatsApp" className="hover:text-white transition-colors">
+                                            <MessageCircle size={22} />
                                         </a>
-                                        <a href="https://www.youtube.com/@Mr_White_Dev" target="_blank" rel="noopener noreferrer" className="block hover:text-white transition-colors">
-                                            youtube/@Mr_White_Dev
+                                        <a href="https://www.youtube.com/@Mr_White_Dev" target="_blank" rel="noopener noreferrer" aria-label="YouTube" title="YouTube" className="hover:text-white transition-colors">
+                                            <Youtube size={22} />
+                                        </a>
+                                        <a href="https://www.instagram.com/mwdev.es" target="_blank" rel="noopener noreferrer" aria-label="Instagram" title="Instagram" className="hover:text-white transition-colors">
+                                            <Instagram size={22} />
+                                        </a>
+                                        <a href="https://www.facebook.com/share/1F6ahQ6S5y/" target="_blank" rel="noopener noreferrer" aria-label="Facebook" title="Facebook" className="hover:text-white transition-colors">
+                                            <Facebook size={22} />
                                         </a>
                                     </div>
                                 </div>

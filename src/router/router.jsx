@@ -7,7 +7,8 @@ import Info from "../module/login/info";
 import Layout from "../module/layout/layout";
 import Dashboard from "../module/dashboard/page/dashboard";
 import CursosComponent from "../module/component/cursosComponent";
-import PruebasComponent from "../module/component/pruebasComponent";
+import PruebasComponent from "../module/component/subcomponent/pruebasComponent";
+import AnunciosComponent from "../module/component/subcomponent/anunciosComponent";
 
 import ArduinoPage from "../module/arduino/page/arduinoPage";
 import Arduino001 from "../module/arduino/component/Arduino001/Arduino001Page";
@@ -77,6 +78,7 @@ function Enrutamiento(){
             <Route path="/Cursos" element={<CursosComponent/>} />
             <Route path="/Info" element={<Info/>} />
             <Route path="/Pruebas" element={<PruebasComponent/>} />
+            <Route path="/Anuncios" element={<AnunciosComponent/>} />
             <Route path="/Proximamente/:id" element={<CourseContent/>} />
             <Route path="/Home" element={<Layout/>}></Route>
             <Route path="/School" element={<Layout/>}></Route>
