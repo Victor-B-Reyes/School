@@ -1,6 +1,7 @@
 function Debian001P03Component() {
   return (
     <>
+      <h1 id="inicio" className="titulo-principal">Configuracion de red</h1>
       <p className="parrafo">
         En la configuración de red, al tratarse de una máquina virtual, se detecta la configuración por defecto.
         Si fuera una máquina física, tendríamos que conectarnos a internet o seleccionar un adaptador.

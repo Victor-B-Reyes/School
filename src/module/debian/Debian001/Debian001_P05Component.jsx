@@ -1,6 +1,7 @@
 function Debian001P05Component() {
   return (
     <>
+      <h1 id="inicio" className="titulo-principal">Configuracion de almacenamiento</h1>
       <p className="parrafo">
         En esta pantalla seleccionaremos el método de particionado del disco según nuestras necesidades.
         <ul className="list-disc pl-5">

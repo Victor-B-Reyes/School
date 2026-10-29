@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+﻿import { useState, useEffect } from "react";
 import Arduino001P01Component from "./Arduino001_P01Component";
 import Arduino001P02Component from "./Arduino001_P02Component";
 import Arduino001P03Component from "./Arduino001_P03Component";
@@ -32,22 +32,22 @@ function Arduino001(){
             <div className="flex flex-col md:flex-row gap-6">
                 <div className="w-full md:w-1/6 flex flex-col gap-2 md:sticky md:top-4 h-fit border-r border-gray-200 pr-4">
                     <span className="font-bold text-gray-700 mb-2">Índice</span>
-                    <a href="#inicio" onClick={(e) => { e.preventDefault(); setPage(0); const element = document.getElementById('inicio'); setTimeout(() => element?.scrollIntoView({ behavior: 'smooth' }), 0); }} className="hover:text-blue-600 font-bold hover:bg-gray-50 py-2 rounded transition-colors">Introducción</a>
-                    <a href="#Titulo2" onClick={(e) => { e.preventDefault(); setPage(0); const element = document.getElementById('Titulo2'); setTimeout(() => element?.scrollIntoView({ behavior: 'smooth' }), 0); }} className="text-gray-600 hover:text-blue-600 hover:bg-gray-50 p-2 rounded transition-colors">Arduino UNO</a>
-                    <a href="#Titulo3" onClick={(e) => { e.preventDefault(); setPage(0); const element = document.getElementById('Titulo3'); setTimeout(() => element?.scrollIntoView({ behavior: 'smooth' }), 0); }} className="text-gray-600 hover:text-blue-600 hover:bg-gray-50 p-2 rounded transition-colors">Wokwi</a>
-                    <a href="#inicio" onClick={(e) => { e.preventDefault(); setPage(1); }} className=" hover:text-blue-600 font-bold hover:bg-gray-50 py-2 rounded transition-colors">"hola mundo"</a>
-                    <a href="#inicio" onClick={(e) => { e.preventDefault(); setPage(2); }} className=" hover:text-blue-600 font-bold hover:bg-gray-50 py-2 rounded transition-colors">Variables</a>
-                    <a href="#inicio" onClick={(e) => { e.preventDefault(); setPage(3); }} className=" hover:text-blue-600 font-bold hover:bg-gray-50 py-2 rounded transition-colors">Estructuras con operadores</a>
-                    <a href="#inicio" onClick={(e) => { e.preventDefault(); setPage(4); }} className=" hover:text-blue-600 font-bold hover:bg-gray-50 py-2 rounded transition-colors">Estructuras con comparadores</a>
-                    <a href="#inicio" onClick={(e) => { e.preventDefault(); setPage(5); }} className=" hover:text-blue-600 font-bold hover:bg-gray-50 py-2 rounded transition-colors">Ámbito de variables y operadores</a>
-                    <a href="#inicio" onClick={(e) => { e.preventDefault(); setPage(6); }} className=" hover:text-blue-600 font-bold hover:bg-gray-50 py-2 rounded transition-colors">Funciones</a>
-                    <a href="#inicio" onClick={(e) => { e.preventDefault(); setPage(7); }} className=" hover:text-blue-600 font-bold hover:bg-gray-50 py-2 rounded transition-colors">Ciclo For</a>
-                    <a href="#inicio" onClick={(e) => { e.preventDefault(); setPage(8); }} className=" hover:text-blue-600 font-bold hover:bg-gray-50 py-2 rounded transition-colors">While y do while</a>
-                    <a href="#inicio" onClick={(e) => { e.preventDefault(); setPage(9); }} className=" hover:text-blue-600 font-bold hover:bg-gray-50 py-2 rounded transition-colors">Operadores lógicos</a>
-                    <a href="#Titulo4" onClick={(e) => { e.preventDefault(); setPage(9); const element = document.getElementById('Titulo4'); setTimeout(() => element?.scrollIntoView({ behavior: 'smooth' }), 0); }} className="text-gray-600 hover:text-blue-600 hover:bg-gray-50 p-2 rounded transition-colors">AND</a>
-                    <a href="#Titulo5" onClick={(e) => { e.preventDefault(); setPage(9); const element = document.getElementById('Titulo5'); setTimeout(() => element?.scrollIntoView({ behavior: 'smooth' }), 0); }} className="text-gray-600 hover:text-blue-600 hover:bg-gray-50 p-2 rounded transition-colors">OR</a>
-                    <a href="#Titulo6" onClick={(e) => { e.preventDefault(); setPage(9); const element = document.getElementById('Titulo6'); setTimeout(() => element?.scrollIntoView({ behavior: 'smooth' }), 0); }} className="text-gray-600 hover:text-blue-600 hover:bg-gray-50 p-2 rounded transition-colors">NOT</a>
-                    <a href="#inicio" onClick={(e) => { e.preventDefault(); setPage(10); }} className=" hover:text-blue-600 font-bold hover:bg-gray-50 py-2 rounded transition-colors">Switch case</a>
+                    <a href="#inicio" onClick={(e) => { e.preventDefault(); setPage(0); const element = document.getElementById('inicio'); setTimeout(() => element?.scrollIntoView({ behavior: 'smooth' }), 0); }} aria-current={page === 0 ? "page" : undefined} className={`hover:text-blue-600 font-bold hover:bg-gray-50 py-2 rounded transition-colors ${page === 0 ? "bg-blue-100 text-blue-700 border-l-4 border-blue-600 pl-2" : "text-gray-700"}`}>Introducción</a>
+                    <a href="#Titulo2" onClick={(e) => { e.preventDefault(); setPage(0); const element = document.getElementById('Titulo2'); setTimeout(() => element?.scrollIntoView({ behavior: 'smooth' }), 0); }} aria-current={page === 0 ? "page" : undefined} className="text-gray-600 hover:text-blue-600 hover:bg-gray-50 p-2 rounded transition-colors">Arduino UNO</a>
+                    <a href="#Titulo3" onClick={(e) => { e.preventDefault(); setPage(0); const element = document.getElementById('Titulo3'); setTimeout(() => element?.scrollIntoView({ behavior: 'smooth' }), 0); }} aria-current={page === 0 ? "page" : undefined} className="text-gray-600 hover:text-blue-600 hover:bg-gray-50 p-2 rounded transition-colors">Wokwi</a>
+                    <a href="#inicio" onClick={(e) => { e.preventDefault(); setPage(1); }} aria-current={page === 1 ? "page" : undefined} className={` hover:text-blue-600 font-bold hover:bg-gray-50 py-2 rounded transition-colors ${page === 1 ? "bg-blue-100 text-blue-700 border-l-4 border-blue-600 pl-2" : "text-gray-700"}`}>"hola mundo"</a>
+                    <a href="#inicio" onClick={(e) => { e.preventDefault(); setPage(2); }} aria-current={page === 2 ? "page" : undefined} className={` hover:text-blue-600 font-bold hover:bg-gray-50 py-2 rounded transition-colors ${page === 2 ? "bg-blue-100 text-blue-700 border-l-4 border-blue-600 pl-2" : "text-gray-700"}`}>Variables</a>
+                    <a href="#inicio" onClick={(e) => { e.preventDefault(); setPage(3); }} aria-current={page === 3 ? "page" : undefined} className={` hover:text-blue-600 font-bold hover:bg-gray-50 py-2 rounded transition-colors ${page === 3 ? "bg-blue-100 text-blue-700 border-l-4 border-blue-600 pl-2" : "text-gray-700"}`}>Estructuras con operadores</a>
+                    <a href="#inicio" onClick={(e) => { e.preventDefault(); setPage(4); }} aria-current={page === 4 ? "page" : undefined} className={` hover:text-blue-600 font-bold hover:bg-gray-50 py-2 rounded transition-colors ${page === 4 ? "bg-blue-100 text-blue-700 border-l-4 border-blue-600 pl-2" : "text-gray-700"}`}>Estructuras con comparadores</a>
+                    <a href="#inicio" onClick={(e) => { e.preventDefault(); setPage(5); }} aria-current={page === 5 ? "page" : undefined} className={` hover:text-blue-600 font-bold hover:bg-gray-50 py-2 rounded transition-colors ${page === 5 ? "bg-blue-100 text-blue-700 border-l-4 border-blue-600 pl-2" : "text-gray-700"}`}>Ámbito de variables y operadores</a>
+                    <a href="#inicio" onClick={(e) => { e.preventDefault(); setPage(6); }} aria-current={page === 6 ? "page" : undefined} className={` hover:text-blue-600 font-bold hover:bg-gray-50 py-2 rounded transition-colors ${page === 6 ? "bg-blue-100 text-blue-700 border-l-4 border-blue-600 pl-2" : "text-gray-700"}`}>Funciones</a>
+                    <a href="#inicio" onClick={(e) => { e.preventDefault(); setPage(7); }} aria-current={page === 7 ? "page" : undefined} className={` hover:text-blue-600 font-bold hover:bg-gray-50 py-2 rounded transition-colors ${page === 7 ? "bg-blue-100 text-blue-700 border-l-4 border-blue-600 pl-2" : "text-gray-700"}`}>Ciclo For</a>
+                    <a href="#inicio" onClick={(e) => { e.preventDefault(); setPage(8); }} aria-current={page === 8 ? "page" : undefined} className={` hover:text-blue-600 font-bold hover:bg-gray-50 py-2 rounded transition-colors ${page === 8 ? "bg-blue-100 text-blue-700 border-l-4 border-blue-600 pl-2" : "text-gray-700"}`}>While y do while</a>
+                    <a href="#inicio" onClick={(e) => { e.preventDefault(); setPage(9); }} aria-current={page === 9 ? "page" : undefined} className={` hover:text-blue-600 font-bold hover:bg-gray-50 py-2 rounded transition-colors ${page === 9 ? "bg-blue-100 text-blue-700 border-l-4 border-blue-600 pl-2" : "text-gray-700"}`}>Operadores lógicos</a>
+                    <a href="#Titulo4" onClick={(e) => { e.preventDefault(); setPage(9); const element = document.getElementById('Titulo4'); setTimeout(() => element?.scrollIntoView({ behavior: 'smooth' }), 0); }} aria-current={page === 9 ? "page" : undefined} className="text-gray-600 hover:text-blue-600 hover:bg-gray-50 p-2 rounded transition-colors">AND</a>
+                    <a href="#Titulo5" onClick={(e) => { e.preventDefault(); setPage(9); const element = document.getElementById('Titulo5'); setTimeout(() => element?.scrollIntoView({ behavior: 'smooth' }), 0); }} aria-current={page === 9 ? "page" : undefined} className="text-gray-600 hover:text-blue-600 hover:bg-gray-50 p-2 rounded transition-colors">OR</a>
+                    <a href="#Titulo6" onClick={(e) => { e.preventDefault(); setPage(9); const element = document.getElementById('Titulo6'); setTimeout(() => element?.scrollIntoView({ behavior: 'smooth' }), 0); }} aria-current={page === 9 ? "page" : undefined} className="text-gray-600 hover:text-blue-600 hover:bg-gray-50 p-2 rounded transition-colors">NOT</a>
+                    <a href="#inicio" onClick={(e) => { e.preventDefault(); setPage(10); }} aria-current={page === 10 ? "page" : undefined} className={` hover:text-blue-600 font-bold hover:bg-gray-50 py-2 rounded transition-colors ${page === 10 ? "bg-blue-100 text-blue-700 border-l-4 border-blue-600 pl-2" : "text-gray-700"}`}>Switch case</a>
                     <a href="#Referencias" className="text-gray-600 hover:text-blue-600 hover:bg-gray-50 p-2 rounded transition-colors">Referencias</a>
                 </div>
                 
@@ -201,8 +201,29 @@ function Arduino001(){
                             Delay(). (s/f). Arduino.Cc. Recuperado el 18 de noviembre de 2024, de <a href="https://www.arduino.cc/reference/es/language/functions/time/delay/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline break-all">https://www.arduino.cc/reference/es/language/functions/time/delay/</a>
                         </p>
                     </div>
-                </div>
 
+                <nav aria-label="Navegación de páginas" className="mt-8 flex items-center justify-between gap-4 border-t border-gray-200 pt-4">
+                    <button
+                        type="button"
+                        onClick={() => setPage((currentPage) => Math.max(0, currentPage - 1))}
+                        disabled={page === 0}
+                        className="rounded-lg bg-blue-600 px-4 py-2 font-semibold text-white transition-colors hover:bg-blue-700 disabled:cursor-not-allowed disabled:bg-gray-300"
+                    >
+                        ← Anterior
+                    </button>
+                    <span aria-live="polite" className="text-sm font-semibold text-gray-700">
+                        Página {page + 1} de 11
+                    </span>
+                    <button
+                        type="button"
+                        onClick={() => setPage((currentPage) => Math.min(10, currentPage + 1))}
+                        disabled={page === 10}
+                        className="rounded-lg bg-blue-600 px-4 py-2 font-semibold text-white transition-colors hover:bg-blue-700 disabled:cursor-not-allowed disabled:bg-gray-300"
+                    >
+                        Siguiente →
+                    </button>
+                </nav>
+                </div>
             </div>
                 <button
                     onClick={resetpage}

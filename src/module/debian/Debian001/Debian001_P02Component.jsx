@@ -1,6 +1,7 @@
 function Debian001P02Component() {
   return (
     <>
+      <h1 id="inicio" className="titulo-principal">Configuracion de inicio</h1>
       <p className="parrafo">
         Al iniciar la máquina virtual, aparecerá la pantalla de inicio. Si esperamos más de 5 segundos,
         se iniciará automáticamente.

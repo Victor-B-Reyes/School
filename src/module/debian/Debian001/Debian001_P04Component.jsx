@@ -1,6 +1,7 @@
 function Debian001P04Component() {
   return (
     <>
+      <h1 id="inicio" className="titulo-principal">Configuracion de credenciales</h1>
       <p className="parrafo">
         Ahora nos solicita la contraseña del usuario root, que servirá para realizar modificaciones e instalaciones
         en el sistema operativo. No olvides esta contraseña.

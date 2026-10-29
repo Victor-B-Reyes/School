@@ -27,12 +27,12 @@ function IA001(){
             <div className="flex flex-col md:flex-row gap-6">
                 <div className="w-full md:w-1/6 flex flex-col gap-2 md:sticky md:top-4 h-fit border-r border-gray-200 pr-4">
                     <span className="font-bold text-gray-700 mb-2">Índice</span>
-                    <a href="#inicio" onClick={(e) => { e.preventDefault(); setPage(0); const element = document.getElementById('inicio'); setTimeout(() => element?.scrollIntoView({ behavior: 'smooth' }), 0); }} className="hover:text-blue-600 font-bold hover:bg-gray-50 py-2 rounded transition-colors">Introducción</a>
-                    <a href="#inicio" onClick={(e) => { e.preventDefault(); setPage(1); }} className=" hover:text-blue-600 font-bold hover:bg-gray-50 py-2 rounded transition-colors">Clase 1</a>
-                    <a href="#inicio" onClick={(e) => { e.preventDefault(); setPage(2); }} className=" hover:text-blue-600 font-bold hover:bg-gray-50 py-2 rounded transition-colors">Clase 2</a> 
-                    <a href="#inicio" onClick={(e) => { e.preventDefault(); setPage(3); }} className=" hover:text-blue-600 font-bold hover:bg-gray-50 py-2 rounded transition-colors">Clase 3</a> 
-                    <a href="#inicio" onClick={(e) => { e.preventDefault(); setPage(4); }} className=" hover:text-blue-600 font-bold hover:bg-gray-50 py-2 rounded transition-colors">Clase 4</a> 
-                    <a href="#inicio" onClick={(e) => { e.preventDefault(); setPage(5); }} className=" hover:text-blue-600 font-bold hover:bg-gray-50 py-2 rounded transition-colors">Clase 5</a>
+                    <a href="#inicio" onClick={(e) => { e.preventDefault(); setPage(0); const element = document.getElementById('inicio'); setTimeout(() => element?.scrollIntoView({ behavior: 'smooth' }), 0); }} aria-current={page === 0 ? "page" : undefined} className={`hover:text-blue-600 font-bold hover:bg-gray-50 py-2 rounded transition-colors ${page === 0 ? "bg-blue-100 text-blue-700 border-l-4 border-blue-600 pl-2" : "text-gray-700"}`}>Introducción</a>
+                    <a href="#inicio" onClick={(e) => { e.preventDefault(); setPage(1); }} aria-current={page === 1 ? "page" : undefined} className={`hover:text-blue-600 font-bold hover:bg-gray-50 py-2 rounded transition-colors ${page === 1 ? "bg-blue-100 text-blue-700 border-l-4 border-blue-600 pl-2" : "text-gray-700"}`}>Clase 1</a>
+                    <a href="#inicio" onClick={(e) => { e.preventDefault(); setPage(2); }} aria-current={page === 2 ? "page" : undefined} className={`hover:text-blue-600 font-bold hover:bg-gray-50 py-2 rounded transition-colors ${page === 2 ? "bg-blue-100 text-blue-700 border-l-4 border-blue-600 pl-2" : "text-gray-700"}`}>Clase 2</a>
+                    <a href="#inicio" onClick={(e) => { e.preventDefault(); setPage(3); }} aria-current={page === 3 ? "page" : undefined} className={`hover:text-blue-600 font-bold hover:bg-gray-50 py-2 rounded transition-colors ${page === 3 ? "bg-blue-100 text-blue-700 border-l-4 border-blue-600 pl-2" : "text-gray-700"}`}>Clase 3</a>
+                    <a href="#inicio" onClick={(e) => { e.preventDefault(); setPage(4); }} aria-current={page === 4 ? "page" : undefined} className={`hover:text-blue-600 font-bold hover:bg-gray-50 py-2 rounded transition-colors ${page === 4 ? "bg-blue-100 text-blue-700 border-l-4 border-blue-600 pl-2" : "text-gray-700"}`}>Clase 4</a>
+                    <a href="#inicio" onClick={(e) => { e.preventDefault(); setPage(5); }} aria-current={page === 5 ? "page" : undefined} className={`hover:text-blue-600 font-bold hover:bg-gray-50 py-2 rounded transition-colors ${page === 5 ? "bg-blue-100 text-blue-700 border-l-4 border-blue-600 pl-2" : "text-gray-700"}`}>Clase 5</a>
                 </div>
                 
                 <div className="w-full md:flex-1 min-w-0">
@@ -61,6 +61,28 @@ function IA001(){
                     {page === 5 ?
                         <IA001P05Component />
                     : null}
+
+                    <nav aria-label="Navegación de páginas" className="mt-8 flex items-center justify-between gap-4 border-t border-gray-200 pt-4">
+                        <button
+                            type="button"
+                            onClick={() => setPage((currentPage) => Math.max(0, currentPage - 1))}
+                            disabled={page === 0}
+                            className="rounded-lg bg-blue-600 px-4 py-2 font-semibold text-white transition-colors hover:bg-blue-700 disabled:cursor-not-allowed disabled:bg-gray-300"
+                        >
+                            ← Anterior
+                        </button>
+                        <span aria-live="polite" className="text-sm font-semibold text-gray-700">
+                            Página {page + 1} de 6
+                        </span>
+                        <button
+                            type="button"
+                            onClick={() => setPage((currentPage) => Math.min(5, currentPage + 1))}
+                            disabled={page === 5}
+                            className="rounded-lg bg-blue-600 px-4 py-2 font-semibold text-white transition-colors hover:bg-blue-700 disabled:cursor-not-allowed disabled:bg-gray-300"
+                        >
+                            Siguiente →
+                        </button>
+                    </nav>
                     
             
                 </div>

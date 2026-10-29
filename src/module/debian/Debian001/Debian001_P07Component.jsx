@@ -1,6 +1,7 @@
 function Debian001P07Component() {
   return (
     <>
+      <h1 id="inicio" className="titulo-principal">Configuracion de entorno de escritorio</h1>
       <p className="parrafo">
         En la seleccion de programas nos apareceran varias opciones, en este caso seleccionaremos:
       </p>

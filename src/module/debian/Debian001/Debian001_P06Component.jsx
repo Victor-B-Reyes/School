@@ -1,6 +1,7 @@
 function Debian001P06Component() {
   return (
     <>
+      <h1 id="inicio" className="titulo-principal">Configuracion de gestor de paquetes</h1>
       <p className="parrafo">
         Nos preguntará si deseamos configurar opciones adicionales durante la instalación. Seleccionamos "No".
       </p>
