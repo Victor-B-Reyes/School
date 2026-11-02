@@ -8,6 +8,8 @@ import Debian001P06Component from "./Debian001_P06Component";
 import Debian001P07Component from "./Debian001_P07Component";
 import Debian001P08Component from "./Debian001_P08Component";
 import Debian001P09Component from "./Debian001_P09Component";
+import Debian001P10Component from "./Debian001_P10Component";
+import Debian001P11Component from "./Debian001_P11Component";
 
 function Debian001(){
     const [page, setPage] = useState(0);
@@ -41,6 +43,8 @@ function Debian001(){
                     <a href="#inicio" onClick={(e) => { e.preventDefault(); setPage(7); }} aria-current={page === 7 ? "page" : undefined} className={` hover:text-blue-600 font-bold hover:bg-gray-50 py-2 rounded transition-colors ${page === 7 ? "bg-blue-100 text-blue-700 border-l-4 border-blue-600 pl-2" : "text-gray-700"}`}>Configuracion de entorno de escritorio</a>
                     <a href="#inicio" onClick={(e) => { e.preventDefault(); setPage(8); }} aria-current={page === 8 ? "page" : undefined} className={` hover:text-blue-600 font-bold hover:bg-gray-50 py-2 rounded transition-colors ${page === 8 ? "bg-blue-100 text-blue-700 border-l-4 border-blue-600 pl-2" : "text-gray-700"}`}>Inicialización del sistema</a>
                     <a href="#inicio" onClick={(e) => { e.preventDefault(); setPage(9); }} aria-current={page === 9 ? "page" : undefined} className={` hover:text-blue-600 font-bold hover:bg-gray-50 py-2 rounded transition-colors ${page === 9 ? "bg-blue-100 text-blue-700 border-l-4 border-blue-600 pl-2" : "text-gray-700"}`}>Conexion por SSH</a>
+                    <a href="#inicio" onClick={(e) => { e.preventDefault(); setPage(10); }} aria-current={page === 10 ? "page" : undefined} className={` hover:text-blue-600 font-bold hover:bg-gray-50 py-2 rounded transition-colors ${page === 10 ? "bg-blue-100 text-blue-700 border-l-4 border-blue-600 pl-2" : "text-gray-700"}`}>Instalacion de Ngix</a>
+                    <a href="#inicio" onClick={(e) => { e.preventDefault(); setPage(11); }} aria-current={page === 11 ? "page" : undefined} className={` hover:text-blue-600 font-bold hover:bg-gray-50 py-2 rounded transition-colors ${page === 11 ? "bg-blue-100 text-blue-700 border-l-4 border-blue-600 pl-2" : "text-gray-700"}`}>Instalacion de MariaDB</a>
                 </div>
                 
                 <div className="w-full md:flex-1 min-w-0">
@@ -104,6 +108,12 @@ function Debian001(){
                     {page === 9 ?
                         <Debian001P09Component />
                     : null}
+                    {page === 10?
+                        <Debian001P10Component />
+                    : null}
+                    {page === 11?
+                        <Debian001P11Component />
+                    :null}
 
                     <nav aria-label="Navegación de páginas" className="mt-8 flex items-center justify-between gap-4 border-t border-gray-200 pt-4">
                         <button
@@ -115,12 +125,12 @@ function Debian001(){
                             ← Anterior
                         </button>
                         <span aria-live="polite" className="text-sm font-semibold text-gray-700">
-                            Página {page + 1} de 10
+                            Página {page + 1} de 12
                         </span>
                         <button
                             type="button"
-                            onClick={() => setPage((currentPage) => Math.min(9, currentPage + 1))}
-                            disabled={page === 9}
+                            onClick={() => setPage((currentPage) => Math.min(11, currentPage + 1))}
+                            disabled={page === 11}
                             className="rounded-lg bg-blue-600 px-4 py-2 font-semibold text-white transition-colors hover:bg-blue-700 disabled:cursor-not-allowed disabled:bg-gray-300"
                         >
                             Siguiente →

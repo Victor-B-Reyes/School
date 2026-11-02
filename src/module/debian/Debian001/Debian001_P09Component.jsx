@@ -1,4 +1,7 @@
-function Debian001P03Component() {
+import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
+import { oneDark } from "react-syntax-highlighter/dist/esm/styles/prism";
+
+function Debian001P09Component() {
   return (
     <>
       <h1 id="inicio" className="titulo-principal">Conexion por SSH</h1>
@@ -32,7 +35,9 @@ function Debian001P03Component() {
       <br />
       <p className="parrafo">
         Al aceptar los cambios y encender la máquina virtual, podremos ver que se ha asignado una dirección IP válida, lo que nos permitirá acceder a la máquina virtual desde otra computadora en la misma red. Con el comando:
-        <br /> <strong><code>ip a</code></strong><br/>
+        <SyntaxHighlighter language="shell" style={oneDark}>
+          {`ip a`}
+        </SyntaxHighlighter>
         Este comando nos mostrará la información de red de la máquina virtual, incluyendo la dirección IP asignada. Para este ejemplo es ka dirección IP: 192.168.10.81
       </p>
       <div className="contenedor-imgen">
@@ -41,7 +46,9 @@ function Debian001P03Component() {
       <br />
       <p className="parrafo">
         Para conectarnos a la máquina virtual desde la computadora anfitriona, ingresamos a la terminal de windows y utilizamos el comando <strong><code>ssh</code></strong> seguido del nombre de usuario y la dirección IP de la máquina virtual. Por ejemplo:,
-        <br /> <strong><code>ssh server@192.168.10.81</code></strong>
+        <SyntaxHighlighter language="shell" style={oneDark}>
+          {`ssh server@192.168.10.81`}
+        </SyntaxHighlighter>
       </p>
       <div className="contenedor-imgen">
         <img src="/Debian_img/debianp1/Cap0057.jpg" alt="Captura de pantalla de VirtualBox" />
@@ -65,4 +72,4 @@ function Debian001P03Component() {
   );
 }
 
-export default Debian001P03Component;
+export default Debian001P09Component;
