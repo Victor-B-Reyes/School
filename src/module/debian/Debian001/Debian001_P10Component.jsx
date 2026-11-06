@@ -57,7 +57,7 @@ function Debian001P10Component() {
       <p className="parrafo">
         Agregamos el repositorio oficial de Nginx para que APT pueda encontrar sus paquetes.
         <SyntaxHighlighter language="shell" style={oneDark}>
-          {`echo "deb [signed-by=/usr/share/keyrings/nginx-archive-keyring.gpg] https://nginx.org/packages/debian \`lsb_release -cs\` nginx" | sudo tee /etc/apt/sources.list.d/nginx.list`}
+          {`echo "deb [signed-by=/usr/share/keyrings/nginx-archive-keyring.gpg] https://nginx.org/packages/debian \`lsb_release -cs\` nginx" | tee /etc/apt/sources.list.d/nginx.list`}
         </SyntaxHighlighter>
       </p>
       
