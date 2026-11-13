@@ -51,7 +51,7 @@ const CourseContent = () => {
             </button>
           </div>
 
-          <div className="flex flex-col md:flex-row md:items-center gap-3 mb-8">
+          {/*<div className="flex flex-col md:flex-row md:items-center gap-3 mb-8">
             <div className="flex items-center gap-2 bg-blue-600/20 border border-blue-500/30 text-blue-400 px-4 py-2 rounded-xl text-sm font-medium">
               <img src="/icon/agenda.png" alt="Agenda" className="h-5 w-5 object-contain" />
               Próximo inicio: <span className="text-white font-bold">10/10/2026</span>
@@ -64,6 +64,13 @@ const CourseContent = () => {
               <img src="/icon/dinero.png" alt="Dinero" className="h-5 w-5 object-contain" />
               Costos semanal: <span className="text-white font-bold">$250 MX</span>
             </div>
+          </div>*/}
+          <div className="flex flex-col md:flex-row md:items-center gap-3 mb-8">
+            <div className="flex items-center gap-2 bg-blue-600/20 border border-blue-500/30 text-blue-400 px-4 py-2 rounded-xl text-sm font-medium">
+              <img src="/icon/agenda.png" alt="Agenda" className="h-5 w-5 object-contain" />
+              Proximamente
+            </div>
+            
           </div>
 
           <div className="grid md:grid-cols-1 xl:grid-cols-2 gap-8 h-[70vh] overflow-y-scroll scrollbar-hide pr-2">
