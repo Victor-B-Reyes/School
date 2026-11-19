@@ -186,8 +186,8 @@ function HomePage(){
                                     </div>
                                 </div>
                             </div>
-                                <div className="grid grid-cols-1 gap-6 border-t border-gray-200 bg-gray-50 p-6 sm:p-8 lg:grid-cols-2">
-                                    <section className="rounded-xl border border-gray-200 bg-white p-6 shadow-sm lg:col-span-2" aria-labelledby="proyecto-academico-heading">
+                                <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
+                                    <section className=" border-gray-200 bg-gray-100 p-6  lg:col-span-2" aria-labelledby="proyecto-academico-heading">
                                         <p className="mb-2 text-xs font-semibold uppercase tracking-[0.2em] text-blue-600"> <span className="bg-blue-100 text-blue-600 p-2 rounded-lg mr-3">🔬</span>Proyecto académico</p>
                                         <h2 id="proyecto-academico-heading" className="text-lg font-bold leading-relaxed text-gray-900 sm:text-xl">
                                             Desarrollo de interfaz de comunicación entre PLC Siemens S7-1200 y Node.js para el sistema de control y monitoreo de los invernaderos de vainilla del TECNM-Tuxtepec
@@ -200,7 +200,7 @@ function HomePage(){
                                         </div>
                                     </section>
 
-                                    <section className="rounded-xl border border-gray-200 bg-white p-6 shadow-sm" aria-labelledby="certificaciones-heading">
+                                    <section className=" bg-white p-6 shadow-sm" aria-labelledby="certificaciones-heading">
                                         <h2 id="certificaciones-heading" className="mb-4 text-lg font-bold text-gray-900"><span className="bg-emerald-100 text-emerald-600 p-2 rounded-lg mr-3">📜</span>Cursos y certificaciones</h2>
                                         <ul className="space-y-4">
                                             <li className="border-l-2 border-blue-400 pl-4">
@@ -222,13 +222,13 @@ function HomePage(){
                                         </ul>
                                     </section>
 
-                                    <div className="space-y-6">
-                                        <section className="rounded-xl border border-gray-200 bg-white p-6 shadow-sm" aria-labelledby="cursos-impartidos-heading">
+                                    <div className="">
+                                        <section className=" p-6 mb-4 shadow-sm" aria-labelledby="cursos-impartidos-heading">
                                             <h2 id="cursos-impartidos-heading" className="mb-3 text-lg font-bold text-gray-900"> <span className="bg-amber-100 text-amber-600 p-2 rounded-lg mr-3">🧑‍🏫</span>Cursos impartidos</h2>
                                             <p className="font-semibold text-gray-800">Diseño y desarrollo de soluciones IoT con ESP32</p>
                                             <p className="mt-1 text-sm text-gray-500">INEI · 2026</p>
                                         </section>
-                                        <section className="rounded-xl border border-gray-200 bg-white p-6 shadow-sm" aria-labelledby="ponencias-heading">
+                                        <section className=" p-6 shadow-sm" aria-labelledby="ponencias-heading">
                                             <h2 id="ponencias-heading" className="mb-3 text-lg font-bold text-gray-900"><span className="bg-rose-100 text-rose-600 p-2 rounded-lg mr-3">🎤</span>Ponencias</h2>
                                             <p className="font-semibold text-gray-800">Elementos para la automatización y la industria 4.0</p>
                                             <p className="mt-1 text-sm text-gray-500">CIFCA · 2026</p>
