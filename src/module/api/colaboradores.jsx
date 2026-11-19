@@ -11,10 +11,10 @@ export const colaboradores = [
     imageUrl: "/logoIECOM.png",
     url: "https://www.facebook.com/share/1EMxjSrNdF/"
   },
-  /*{
+  {
     id: 3,
-    name: "IECOM",
-    imageUrl: "/logoIECOM.png",
-    url: "https://www.facebook.com/share/1EMxjSrNdF/"
-  },*/
+    name: "HackChain",
+    imageUrl: "/logoHackChain.jpeg",
+    url: "https://www.hackchain.app/"
+  },
 ];
