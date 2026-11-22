@@ -140,7 +140,7 @@ function HomePage(){
                                         </div>
                                         <div className="relative pl-4 border-l-2 border-gray-200">
                                             <h3 className="font-bold text-gray-800"><a href="https://www.facebook.com/ED.PUBLICIDAD.01?locale=es_LA" target="_blank" rel="noopener noreferrer">ED Publicidad</a></h3>
-                                            <p className="text-sm text-blue-600 mb-1">Agosto 2024 - Octubre 2023</p>
+                                            <p className="text-sm text-blue-600 mb-1">Agosto 2024 - Octubre 2024</p>
                                             <p className="text-sm text-gray-600">Desarrollador Full Stack</p>
                                         </div>
                                     </div>
