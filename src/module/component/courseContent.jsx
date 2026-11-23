@@ -1,5 +1,5 @@
 import { useParams, useNavigate } from "react-router-dom";
-import { content } from "../api/contenidosCourses/contentDesarrolloIot";
+import { content } from "../api/contenidosCourses/contentDetail";
 import FormularioInteres from "./formularioInteres";
 import Header from "../layout/header";
 import Footer from "../layout/fooder";
@@ -80,7 +80,7 @@ const CourseContent = () => {
                 className="backdrop-blur-md bg-white/5 border border-white/10 shadow-2xl rounded-2xl p-6 border-t-4 border-t-blue-500 transform hover:-translate-y-2 transition-all duration-300 flex flex-col"
               >
                 <div className="text-blue-400 font-bold text-xs mb-2 uppercase tracking-widest">
-                  Clase {tema.id}
+                  {data.type} {tema.id} {"- " + tema.time}
                 </div>
                 <h2 className="text-xl font-bold text-white mb-4">
                   {tema.title}
@@ -108,7 +108,7 @@ const CourseContent = () => {
             {/* Overlay sutil para que el form resalte */}
             <div className="absolute inset-0 opacity-20 bg-gradient-to-b from-blue-600 to-transparent pointer-events-none"></div>
             
-            <FormularioInteres curso={data.course} />
+            <FormularioInteres curso={data.course} publicidad={data.publicidad} />
           </div>
         </div>
       </div>
@@ -118,10 +118,10 @@ const CourseContent = () => {
         <div className="flex flex-col justify-center p-6 sm:p-10 lg:p-14">
           <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-blue-400">Reconocimiento oficial</p>
           <h2 id="certificacion-heading" className="mb-5 text-3xl font-extrabold text-white sm:text-4xl">
-            Certificación
+            {data.documentacion}
           </h2>
           <p className="leading-relaxed text-gray-300">
-            Al culminar satisfactoriamente el curso, recibirás un certificado a nombre del Instituto Nacional de Electrónica e Ingeniería S.A.C. (INEI S.A.C.), firmado por un ingeniero colegiado, que acredita la formación y los conocimientos adquiridos en Diseño y Desarrollo de Sistemas IoT con ESP32.
+            {data.descripcion}
           </p>
         </div>
         <div
@@ -129,9 +129,9 @@ const CourseContent = () => {
           onContextMenu={(e) => e.preventDefault()}
         >
           <img
-            src="/CertificadoIOT.png"
-            alt="Ejemplo del certificado del curso"
-            className="h-auto max-h-[28rem] w-full rounded-xl border border-white/10 object-contain shadow-lg select-none"
+            src={data.documento}
+            alt="Ejemplo del documento del curso"
+            className="h-auto max-h-[28rem] w-full rounded-xl border border-white/10 object-contain shadow-lg select-none text-white"
             draggable={false}
             onContextMenu={(e) => e.preventDefault()}
           />

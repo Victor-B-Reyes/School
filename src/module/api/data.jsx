@@ -72,7 +72,7 @@ export const cursos = [
     "seccion":[ "IoT","Esp32" ],
     "type": "Subscription",
     "identifier": "IoT_esp32", 
-    "fechaInicio": "10/10/2026",
+    "fechaInicio": "",
     "finish": false,
     "public": true
   },
@@ -87,6 +87,19 @@ export const cursos = [
     "identifier": "Debian_virtual",
     "fechaInicio": "",
     "finish": true,
+    "public": true
+  },
+ {
+    "id": 9,
+    "cap": "",
+    "title": "Computación en solo 1 año",
+    "description": "En un año dominarás Office, diseño gráfico y edición audiovisual, además de las bases de redes, programación, bases de datos y mantenimiento de PC mediante proyectos prácticos.",
+    "imageUrl": "CursoInformatica.jpg",
+    "seccion":[ "Debian",],
+    "type": "Subscription",
+    "identifier": "Debian_virtual",
+    "fechaInicio": "",
+    "finish": false,
     "public": true
   },
   /*{
